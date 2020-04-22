@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url(https://images.unsplash.com/photo-1585427915733-13af3fcb80b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);
+      box-sizing: border-box;
+      background-color: #cccccc;
+      max-height: 1700px;
+      height: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    #title,
+    #descrip {
+      text-align: center;
+    }
+
+    #name,
+    #email,
+    #number,
+    #dropdown {
+      color: black;
+      font-size: 20px;
+      width: 100%;
+      max-width: 700px;
+      box-sizing: border-box;
+    }
+
+    form {
+      background-color: rgba(160, 120, 220, 0.6);
+      color: white;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    .survey-form {
+      padding: 50px;
+    }
+
+    #comment {
+      min-height: 120px;
+      width: 100%;
+      padding: 0.625rem;
+      resize: vertical;
+      color: black;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: green;
+      color: inherit;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 id="title">FreeCodeCamp Survey Form</h1>
+  <h4 id="descrip"><i>Thank you for taking the time to help us improve the platform of freeCodeCamp.</i></h4>
+  <form class="survey-form" action="/action_page.php">
+    <label for="name">
+      <h3>Name</h3>
+    </label><br />
+    <input type="text" id="name" name="name" placeholder="type in your full name" required>
+    <br><br>
+    <label for="email">
+      <h3>Email</h3>
+    </label><br />
+    <input type="text" id="email" name="email" title="Please correct email!" placeholder="between @ aA9 free" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+    <br><br>
+    <label for="number">
+      <h3>Number</h3>
+    </label><br />
+    <input type="text" id="number" name="number" placeholder="two digit please!" min="01" max="99" pattern="[0-9]+[0-9]+" required><br><br>
+
+    <p>Which option best describes your current role?</p>
+    <select id="dropdown" text="Slect current role!" style="color:black">
+      <option selected="selected">Select current role.</option>
+      <option value="student">Student</option>
+      <option value="full_time_job">Full time job</option>
+      <option value="full_time_learner">Full Time Learner</option>
+      <option value="prefer_not-to_say">Prefer not to say.</option>
+      <option value="others">Others</option>
+    </select><br><br>
+
+    <p>Would you recommend freeCodeCamp to a friend?</p>
+    <input type="radio" id="yes" name="choose" value="yes">
+    <label for="yes">Definitely</label><br>
+    <input type="radio" id="half" name="choose" value="half">
+    <label for="half">Maybe</label><br>
+    <input type="radio" id="nono" name="choose" value="nono">
+    <label for="nono">Not say</label><br><br>
+
+    <p>What is your favorite feature of freeCodeCamp?</p>
+    <input type="checkbox" id="checkbox1" name="cbox" value="pep">
+    <label for="checkbox1">Front-end Projects</label><br>
+    <input type="checkbox" id="checkbox2" name="cbox" value="bep">
+    <label for="checkbox2">Back-end Projects</label><br>
+    <input type="checkbox" id="checkbox3" name="cbox" value="dv">
+    <label for="checkbox3">Data Visualization</label><br>
+    <input type="checkbox" id="checkbox4" name="cbox" value="challan">
+    <label for="checkbox4">Challenges</label><br>
+    <input type="checkbox" id="checkbox4" name="cbox" value="osc">
+    <label for="checkbox5">Open Source Community</label><br>
+    <input type="checkbox" id="checkbox6" name="cbox" value="ghr">
+    <label for="checkbox6">Gitter Help Romms</label><br>
+    <input type="checkbox" id="checkbox7" name="cbox" value="vdo">
+    <label for="checkbox7">Videos</label><br>
+    <input type="checkbox" id="checkbox8" name="cbox" value="cmu">
+    <label for="checkbox8">City Meetups</label><br>
+    <input type="checkbox" id="checkbox9" name="cbox" value="wk">
+    <label for="checkbox9">Wiki</label><br>
+    <input type="checkbox" id="checkbox10" name="cbox" value="frm">
+    <label for="checkbox10">Forum</label><br>
+    <input type="checkbox" id="checkbox11" name="cbox" value="acs">
+    <label for="checkbox11">Additional Courses</label><br><br>
+
+
+    <p>Any comments or suggestions?</p>
+    <textarea id="comment" placeholder="Enter your comment here!">enter your comment here!
+    </textarea><br><br><br>
+    <input type="submit" value="Submit" class="submit-btn" placeholder="Submit">
+  </form>
+</body>
+
+</html>
