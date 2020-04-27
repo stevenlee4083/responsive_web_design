@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #container {
+    display: flex;
+    box-sizing: border-box;
+  }
+  @media (max-width:700px){
+    #container {
+      flex-direction: column;
+    }
+    #navbar {
+      width: 100%;
+    }
+    #navbar>ul{
+      width: 250px;
+    }
+    #navbar>header {
+      font-size: 16px;
+    }
+  }
+  #navbar ul {
+    height: 50%;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  #navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+  }
+
+  #navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #navbar {
+    width: 40%;
+  }
+  @media on screen (max-width: 700px) {
+    #navbar>header {
+      font-size: 0.5rem:
+    }
+  }
+  #main-doc {
+    widows: 60%;
+    justify-content: flex-start;
+  }
+  #navbar>ul>li>a {
+    text-decoration: none;
+
+  }
+  header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+  #navbar>ul {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style-type: none;
+    width: 220px;
+  }
+  .main-section {
+    padding: 0 20px 15px;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <nav id="navbar">
+      <header>React Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#React_Home">React Home</a></li>
+        <li><a class="nav-link" href="#React_Intro">React Intro</a></li>
+        <li><a class="nav-link" href="#React_Get_Started">React Get Started</a></li>
+        <li><a class="nav-link" href="#React_ES6">React ES6</a></li>
+        <li><a class="nav-link" href="#Render_HTML">Render HTML</a></li>
+        <li><a class="nav-link" href="#React_JSX">React JSX</a></li>
+        <li><a class="nav-link" href="#React_Components">React Components</a></li>
+        <li><a class="nav-link" href="#React_Props">React Props</a></li>
+        <li><a class="nav-link" href="#React_State">React State</a></li>
+        <li><a class="nav-link" href="#React_Lifecycle">React Lifecycle</a></li>
+        <li><a class="nav-link" href="#React_Events">React Events</a></li>
+        <li><a class="nav-link" href="#React_Forms">React Forms</a></li>
+        <li><a class="nav-link" href="#React_CSS">React CSS</a></li>
+        <li><a class="nav-link" href="#React_Sass">React Sass</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="React_Home">
+        <header>React Home</header>
+        <article>
+          <p>
+            React is a JavaScript library for building user. <br>
+            React is used to build single page. <br>
+            React allows us to create reusable UI.<br>
+          </p>
+          <p>
+            Create React App
+            In order to learn and test React, you should set up a React Environment on your computer.
+            This tutorial uses the create-react-app.
+            The create-react-app is an officially supported way to create React applications.
+            If you have NPM and Node.js installed, you can create a React application by first installing the create-react-app.
+            Install create-react-app by running this command in your terminal : <br>
+            <code> C:\Users\Your Name>npm install -g create-react-app</code> <br>You are now ready to create your first React application!
+            Run this command to create a React application named <br /><code> C:\Users\Your Name>npx create-react-app myfirstreact</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="React_Intro">
+        <header>React Intro</header>
+        <article>
+          <p><b>What is React?</b><br>
+            React is a JavaScript library created by Facebook.<br>
+            React is a tool for building UI components.<br>
+            <b>How does React Work?</b><br>
+            React creates a VIRTUAL DOM in memory.
+            Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary
+            manipulating, before making the changes in the browser DOM.
+            React only changes what needs to be changed!
+            React finds out what changes have been made, and changes only what needs to be changed.
+            You will learn the various aspects of how React does this in the rest of this tutorial.<br>
+            <b>React.JS History</b><br>
+            Current version of React.JS is V16.8.6 (March 2019).
+            Initial Release to the Public (V0.3.0) was in July 2013.
+            React.JS was first used in 2011 for Facebook's Newsfeed feature.
+            Facebook Software Engineer, Jordan Walke, created it.
+            The create-react-app version 2.0 package was released in October 2018.
+            Create-react-app version 2.0 supports Babel 7, webpack 4, and Jest23.</p>
+          </article>
+        </section>
+        <section class="main-section" id="React_Get_Started">
+          <header>React Get Started</header>
+          <article>
+            <p>
+              To use React in production, you need NPM and Node.js
+              To get an overview of what React is, you can write React code directly in HTML.
+              But in order to use React in production, you need NPM and Node.js installed.<br>
+              <b>React Directly in HTML</b><br>
+              The quickest way start learning React is to write React directly in your HTML files.
+              Start by including three scripts, the first two let us write React code in our JavaScripts,
+              and the third, Babel, allows us to write JSX syntax and ES6 in older browsers
+            </p>
+            <code>
+              class Hello extends React.Component { <br>
+                render() { <br>
+                  return <br>
+                  <h1>Hello World!</h1>
+                }<br>
+              }<br>
+              ReactDOM.render(<Hello></Hello>, document.getElementById('mydiv'))
+            </code>
+            <p>
+              <b>Setting up a React Environment</b><br>
+              If you have NPM and Node.js installed, you can create a React application by first installing the create-react-app.
+              If you've already created the create-react-app you can skip this section.
+              Install create-react-app by running this command in your terminal:<br> <code>
+                C:\Users\Your Name>npm install -g create-react-app</code><br>
+                Then you are able to create a React application, let's create one called myfirstreact.
+                Run this command to create a React application named myfirstreact:<br>
+                <code> C:\Users\Your Name>npx create-react-app myfirstreact</code><br>
+                The create-react-app will set up everything you need to run a React application.<br>
+                <b>Run the React Application</b><br>
+                Now you are ready to run your first real React application!
+                Run this command to move to the myfirstreact directory:<br>
+                <code>C:\Users\Your Name>cd myfirstreact</code><br>
+                Run this command to run the React application myfirstreact:<br>
+                <code>C:\Users\Your Name\myfirstreact>npm start</code> <br>
+                A new browser window will pop up with your newly created React App! If not, open your browser and type
+                localhost:3000 in the address bar.
+              </p>
+            </article>
+          </section>
+          <section class="main-section" id="React_ES6">
+            <header>React ES6</header>
+            <article>
+              <b>What is ES6?</b><br>
+              ES6 stands for ECMAScript 6.
+              ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also
+              known as ECMAScript 2015.<br>
+              <b>Why Should I Learn ES6?</b><br>
+              React uses ES6, and you should be familiar with some of the new features like:
+              <ul>
+                <li>Classes</li>
+                <li>Arrow Functions</li>
+                <li>Variables (let, const, var)</li>
+              </ul>
+              <p>
+                <b>Classes</b><br>
+                ES6 introduced classes.
+                A class is a type of function, but instead of using the keyword function to initiate it,
+                we use the keyword class, and the properties are assigned inside a constructor() method.<br>
+                <b>Class Inheritance</b><br>
+                To create a class inheritance, use the extends keyword.
+                A class created with a class inheritance inherits all the methods from another class:The super() method refers to the parent class.
+                By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's
+                properties and methods.
+                <code><br>
+                  class Car {<br>
+                    constructor(name) {<br>
+                      this.brand = name;<br>
+                    }
+                    present() {<br>
+                      return 'I have a ' + this.brand;<br>
+                    }
+                  }
+                  class Model extends Car {<br>
+                    constructor(name, mod) {<br>
+                      super(name);<br>
+                      this.model = mod;<br>
+                    }
+                    show() {<br>
+                      return this.present() + ', it is a ' + this.model  <br>                 }
+                    }
+                    mycar = new Model("Ford", "Mustang");<br>
+                    mycar.show();<br>
+                    class Hello extends React.Component {<br>
+                      render() {<br>
+                        return Hello World!<br>
+                      }
+                    }
+                    ReactDOM.render(, document.getElementById('mydiv'))<br>
+                  </code></p>
+                  The super() method refers to the parent class.
+                  By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's
+                  properties and methods.<br>
+                  <b>Arrow Functions</b>  <br>
+                  Arrow functions were introduced in ES6.
+                  Arrow functions allow us to write shorter function syntax:<br>
+                  <b>What About this?</b>
+                  The handling of this is also different in arrow functions compared to regular functions.
+                  In short, with arrow functions there are no binding of this.
+                  In regular functions the this keyword represented the object that called the function, which could be the window, the document,
+                  a button or whatever.
+                  With arrow functions, the this keyword always represents the object that defined the arrow function.
+                  Let us take a look at two examples to understand the difference.
+                  Both examples call a method twice, first when the page loads, and once again when the user clicks a button.
+                  The first example uses a regular function, and the second example uses an arrow function.
+                  The result shows that the first example returns two different objects (window and button), and the second example returns the Header
+                  object twice.<br>
+                  <b>Variables</b><br>
+                  Before ES6 there were only one way of defining your variables: with the var keyword. If you did not define them, they would be
+                  assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
+                  Now, with ES6, there are three ways of defining your variables: var, let, and const.
+                </article>
+              </section><br>
+              <section class="main-section" id="Render_HTML">
+                <header>Render HTML</header>
+                <p>
+                  React's goal is in many ways to render HTML in a web page.
+                  React renders HTML to the web page by using a function called ReactDOM.render().
+                  The Render Function
+                  The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+                  The purpose of the function is to display the specified HTML code inside the specified HTML element.
+                </p>
+                <p>
+                  The Root Node
+                  The root node is the HTML element where you want to display the result.
+                  It is like a container for content managed by React.
+                  It does NOT have to be a element and it does NOT have to have the id='root':
+                </p>
+
+              </section>
+              <section class="main-section" id="React_JSX">
+                <header>React JSX</header>
+                <article>
+                  <p>
+                    <b>What is JSX?</b><br>
+                    JSX stands for JavaScript XML.
+                    JSX allows us to write HTML in React.
+                    JSX makes it easier to write and add HTML in React.<br>
+                    <b>Coding JSX</b><br>
+                    JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild()
+                    methods. JSX converts HTML tags into react elements.<br><code>const myelement = I Love JSX!;
+
+                      ReactDOM.render(myelement, document.getElementById('root'));</code>
+                    </p>
+                    <p><b>Expressions in JSX</b><br>
+                      With JSX you can write expressions inside curly braces { }.
+                      The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the
+                      expression and return the result:
+                    </p>
+                  </article>
+                </section>
+                <section class="main-section" id="React_Components">
+                  <header>React Components</header>
+                  <article>
+                    <p>
+                      Components are like functions that return HTML elements.<br>
+                      <b>React Components</b><br>
+                      Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in
+                      isolation and returns HTML via a render function.
+                      Components come in two types, Class components and Function components, in this tutorial we will concentrate on Class
+                      components.
+                      Create a Class Component
+                      When creating a React component, the component's name must start with an upper case letter.
+                      The component has to include the extends React.Component statement, this statement creates an inheritance to React.Component,
+                      and gives your component access to React.Component's functions.
+                      The component also requires a render() method, this method returns HTML.<br>
+                      <code>class Car extends React.Component {<br>
+                        render() {<br>
+                          return Hi, I am a Car!;<br>
+                        }
+                      }
+                    </code>
+                  </p>
+                </article>
+              </section>
+              <section class="main-section" id="React_Props">
+                <header>React Props</header>
+                <article>
+                  <p>
+                    Props are arguments passed into React components.
+                    Props are passed to components via HTML attributes.
+                    React Props
+                    React Props are like function arguments in JavaScript and attributes in HTML.
+                    To send props into a component, use the same syntax as HTML attributes:
+                  </p>
+                </article>
+              </section>
+              <section class="main-section" id="React_State">
+                <header>React State</header>
+                <article>
+                  <p>
+                    React components has a built-in state object.
+                    The state object is where you store property values that belongs to the component.
+                    When the state object changes, the component re-renders.
+                    Creating the state Object
+                    The state object is initialized in the constructor:
+                    <code>class Car extends React.Component {
+                      constructor(props) {
+                        super(props);
+                        this.state = {brand: "Ford"};
+                      }
+                      render() {
+                        return (
+                        My Car
+                        );
+                      }
+                    }</code>
+                  </p>
+                </article>
+              </section>
+              <section class="main-section" id="React_Lifecycle">
+                <header>React Lifecycle</header>
+                <article>
+                  <p>Lifecycle of Components
+                    Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+                    The three phases are:
+                    <ul>
+                      <li>Mounting</li>
+                      <li>Updating</li>
+                      <li>Unmounting</li>
+                    </ul></p>
+                    <p>Mounting means putting elements into the DOM.
+                      React has four built-in methods that gets called, in this order, when mounting a component:
+                      <ul>
+                        <li>constructor()</li>
+                        <li>getDerivedStateFromProps()</li>
+                        <li>render()</li>
+                        <li>componentDidMount()</li>
+                      </ul>
+                      The render() method is required and will always be called, the others are optional and will be called if you define them.</p>
+                      <p>Updating
+                        The next phase in the lifecycle is when a component is updated.
+                        A component is updated whenever there is a change in the component's state or props.
+                        React has five built-in methods that gets called, in this order, when a component is updated:<br>
+                        getDerivedStateFromProps()<br>
+                        shouldComponentUpdate()<br>
+                        render()<br>
+                        getSnapshotBeforeUpdate()<br>
+                        componentDidUpdate()<br>
+                        The render() method is required and will always be called, the others are optional and will be called if you define them.</p>
+                        <p>Unmounting
+                          The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+                          React has only one built-in method that gets called when a component is unmounted:<br>
+                          componentWillUnmount()<br>
+                          componentWillUnmount <br>
+                          The componentWillUnmount method is called when the component is about to be removed from the DOM.</p>
+                        </article>
+                      </section>
+                      <section class="main-section" id="React_Events">
+                        <header>React Events</header>
+                        <article>
+                          Just like HTML, React can perform actions based on user events.
+                          React has the same events as HTML: click, change, mouseover etc.Adding Events
+                          React events are written in camelCase syntax:
+                          onClick instead of onclick.
+                          React event handlers are written inside curly braces:
+                          onClick={shoot}  instead of onClick="shoot()"
+                        </article>
+                      </section>
+                      <section class="main-section" id="React_Forms">
+                        <header>React Forms</header>
+                        <article>
+                          Just like in HTML, React uses forms to allow users to interact with the web page.
+                          Adding Forms in React
+                          You add a form with React like any other element:
+                          <code>class MyForm extends React.Component {<br>
+                            render() {<br>
+                              return (<br>
+                              Hello <br>
+                              Enter your name: <br>
+                              );
+                            }
+                          }
+                          ReactDOM.render(, document.getElementById('root'));</code>
+                          <p>
+                            Handling Forms
+                            Handling forms is about how you handle the data when it changes value or gets submitted.
+                            In HTML, form data is usually handled by the DOM.
+                            In React, form data is usually handled by the components.
+                            When the data is handled by the components, all the data is stored in the component state.
+                            You can control changes by adding event handlers in the onChange attribute: <br /><code>
+                              class MyForm extends React.Component { <br>
+                                constructor(props) {<br>
+                                  super(props);<br>
+                                  this.state = { username: '' };<br>
+                                }
+                                myChangeHandler = (event) => {<br>
+                                  this.setState({username: event.target.value});<br>
+                                }<br>
+                                render() {<br>
+                                  return (<br>
+                                  Hello {this.state.username}<br>
+                                  Enter your name:<br>
+                                  );
+                                }
+                              }
+                              ReactDOM.render(, document.getElementById('root'));</code>
+                            </p>
+                          </article>
+                        </section>
+                        <section class="main-section" id="React_CSS">
+                          <header>React CSS</header>
+                          <article>
+                            here are many ways to style React with CSS, this tutorial will take a closer look at inline styling, and CSS stylesheet.
+                            Inline Styling
+                            To style an element with the inline style attribute, the value must be a JavaScript object:
+                            <code>class MyHeader extends React.Component { <br>
+                              render() {<br>
+                                return (<br>
+                                Hello Style!<br>
+                                Add a little style!<br>
+                                );
+                              }
+                            }</code>
+                          </article>
+                        </section>
+                        <section class="main-section" id="React_Sass">
+                          <header>React Sass</header>
+                          <article>
+                            What is Sass
+                            Sass is a CSS pre-processor.
+                            Sass files are executed on the server and sends CSS to the browser.
+                            You can learn more about Sass in our Sass Tutorial.
+                            Can I use Sass?
+                            If you use the create-react-app in your project, you can easily install and use Sass in your React projects.
+                            Install Sass by running this command in your <code>C:\Users\Your Name>npm install node-sass</code>
+                            <p>Create a Sass file
+                              Create a Sass file the same way as you create CSS files, but Sass files have the file extension .scss
+                              In Sass files you can use variables and other Sass  <br /><code>$myColor: red;
+                                h1 {
+                                  color: $myColor;
+                                }</code></p>
+                              </article>
+                            </section>
+                            <section class="main-section" id="Reference">
+                              <header>Reference</header>
+                              <article>
+                                <ul>
+                                  <li>
+                                    All the documentation in this page is taken from
+                                    <a href="https://www.w3schools.com/react/default.asp" target="_blank">W3School</a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                        </main>
+                      </body>
+                      </html>
