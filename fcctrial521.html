@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  #navbar {
+    /*overflow: hidden;*/
+    background-color: rgb(76,0,123);
+    position: fixed;
+    top:0;
+    margin: 0;
+    width: 100%;
+    padding: 1em 0;
+}
+.nav a {
+  float: right;
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.align {
+  margin: 0px auto;
+  width: auto;
+}
+    #navbar ul {
+      list-style: none;
+    }
+
+    @media (max-width: 28.75em) {
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-list {
+        margin: 0 1rem;
+      }
+    }
+
+    #welcome-section {
+      background-color: #035aa6;
+      text-align: center;
+      color: white;
+      margin: 0;
+    }
+    #projects {
+      background-color: #4d3232;
+    }
+    .grid-container {
+      display: grid;
+      grid-gap: 50px;
+      grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+      background-color: rgb(127,0,255);
+      padding: 10px;
+      grid-row-gap: 10px;
+      grid-column-gap: 15px;
+      background-size: 100%;
+    }
+
+    .grid-item {
+      background-color: rgb(153, 153, 0);
+      border: 1px solid rgba(153,153,0,0.2);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    #About_Me {
+      height: 95vh;
+      text-align: center;
+      padding-top: 100px;
+
+    }
+    .code {
+      font-size: 10-px;
+    }
+    li>a {
+      text-align: justify;
+    }
+    .project-img{
+      width: 100%;
+      object-fit: cover;
+      height: 360px;
+    }
+    .project-title {
+      font-size: 20px;
+    }
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 50vw;
+      background-color:#ffd31d;
+    }
+    .sec {
+      background-color: rgb(127,0,255);
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .sec h3 {
+      color: white;
+    }
+    .projects-section-header {
+      text-align: center;
+      padding-top: 20px;
+      color: white;
+    }
+    footer {
+      display: flex;
+      background-color: #d8ebb5;
+      justify-content: center;
+    }
+    @media (max-width: 28.75em) {
+      .projects-section-header {
+        font-size: 4rem;
+      }
+    }
+    @media (max-width: 30.625em) {
+      .projects-section {
+        padding: 6rem 1rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 28.75em) {
+      .contact-section-header > h2 {
+        font-size: 4rem;
+      }
+    }
+@media (max-width: 700px){
+  .nav a {
+    font-size: 6px;
+  }
+  .project-section {
+    padding: 5px;
+  }
+}
+@media screen and (max-width:350px) {
+.contact-section-header h2 {
+  font-size: 0.8rem;
+}
+#projects h2 {
+  font-size: 20px;
+}
+footer p {
+  font-size: 10px;
+}
+.grid-container img {
+  width: 80%;
+}
+}
+    </style>
+</head>
+<body>
+  <div id="container">
+<nav id="navbar" class="nav">
+  <ul class="align">
+    <li><a href="#About_Me">About Me(약력)</a></li>
+    <li><a href="#My_Certificates">My Certificates(인증서)</a></li>
+    <li><a href="#Works">Works(포트폴리오)</a></li>
+    <li><a href="#Contact">Contact(연락처)</a></li>
+  </ul>
+</nav>
+<section id="welcome-section">
+  <div id="About_Me">
+    <h1>Steven Lee</h1>
+<p>Now, Frontend Developer. Soon, Full Stack JavaScript Developer</p><br><br>
+  <h3>이승욱</h3>
+  <p>{현 웹퍼블리셔이며 풀스텍 개발자를 향합니다;}</p></div></section>
+  <section class="sec">
+    <h3 id="My_Certificates">Language Certificates(인증서모음)</h3><br>
+  <div class="grid-container">
+    <div class="grid-item">
+     <img src="https://stevenlee4083.github.io/certificates/HTML_Certificate1.jpg" alt="HTML"></div>
+    <div class="grid-item">
+      <img src="https://stevenlee4083.github.io/certificates/CSS_Certificate1.jpg" alt="CSS"></div>
+    <div class="grid-item">
+     <img src="https://stevenlee4083.github.io/certificates/JavaScript_Certificate1.jpg" alt="JavaScript"></div>
+    <div class="grid-item">
+      <img src="https://stevenlee4083.github.io/certificates/JQuery_Certificate1.jpg" alt="jQuery"></div>
+    <div class="grid-item">
+     <img src="https://stevenlee4083.github.io/certificates/PHP_Certificate1.jpg" alt="PHP"></div>
+    <div class="grid-item">
+      <img src="https://stevenlee4083.github.io/certificates/SQL_Certificate1.jpg" alt="SQL"></div>
+    <div class="grid-item">
+      <img src="https://stevenlee4083.github.io/certificates/Python_Certificate1.jpg" alt="Python"></div>
+    <div class="grid-item">
+      <img src="https://stevenlee4083.github.io/certificates/edx_mits_ssc.jpg" alt="MiTx"></div>
+  </div>
+</section>
+<section id="projects" class="projects-section">
+<h2 class="projects-section-header">My portfolio (포트폴리오)</h2><br><br>
+<div id="Works" class="grid-container">
+<div class="grid-item">
+  <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial14.html" target="_blank" class="project project-tile">
+  <img class="project-image" src="https://post-phinf.pstatic.net/MjAxODA0MDJfMjQy/MDAxNTIyNjU2NjA0NDQ0.A9bQXwnNGNcJp52La9XX_EpOxVEzonDZiJKT6LznL00g.L-hbaIpxe_8qQxaCJJ8Hla9a9eayRVjIvdCJ0D1keD8g.JPEG/17.jpg?type=w1200" alt="SingyuHyun">
+  <p class="project-title">
+  <span class="code">&lt;</span>
+  Tribute Page <br>애국자 헌정 페이지
+  <span class="code">&#47;&gt;</span>
+  </p>
+  </a>
+</div>
+<div class="grid-item">
+  <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial21.html" target="_blank" class="project project-tile">
+  <img class="project-image" src="https://stevenlee4083.github.io/certificates/FCCTRIAL21.png" alt="input page" style="height:360px;">
+  <p class="project-title">
+  <span class="code">&lt;</span>
+  User Enquiry Page <br>유저 질문지 페이지
+  <span class="code">&#47;&gt;</span>
+  </p>
+  </a>
+</div>
+<div class="grid-item">
+  <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial32.html" target="_blank" class="project project-tile">
+  <img class="project-image" src="https://stevenlee4083.github.io/certificates/product_landing.png" alt="Product Landing" style="height:360px;">
+  <p class="project-title">
+  <span class="code">&lt;</span>
+  Product Landing Page <br>신상품 렌딩 페이지
+  <span class="code">&#47;&gt;</span>
+  </p>
+  </a>
+</div>
+<div class="grid-item">
+  <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial41.html" target="_blank" class="project project-tile">
+  <img class="project-image" src="https://stevenlee4083.github.io/certificates/tecdoc.png" alt="TECH. DOC" style="height:360px;">
+  <p class="project-title">
+  <span class="code">&lt;</span>
+  React Technical Document<br>리엑트 기술문건 페이지
+  <span class="code">&#47;&gt;</span>
+  </p>
+  </a>
+</div>
+</div>
+</section>
+<section id="contact" class="contact-section">
+<div class="contact-section-header">
+<h2>Seek for chance to work together...</h2>
+<p>With a laptop, let's jump into iT ocean together!</p>
+</div>
+<div id="Contact" class="contact-links">
+  <p>Please! Let me catch your contact information! <br> 연락처 남기시면 즉시 연락 드립니다.</p>
+  <img src="https://img.icons8.com/material-two-tone/2x/secured-letter.png" alt="google form" style="width:88px">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc6PT-D4PUje4fhlVyXKZM2ThrIRWX5v_H0xLUlHN8OuytQKQ/viewform?usp=sf_link" target="_blank" class="btn contact-details">Your contact Info!</a>
+<br>
+<p>My reference</p>
+<a id="profile-link" href="https://github.com/stevenlee4083" target="_blank" class="btn contact-details">My Github Page</a>
+
+</div>
+</section>
+<footer>
+<p>&copy;   2020 Created by Steven Lee following guide from freeCodeCamp.  </p>
+</footer>
+</div>
+
+</body>
+</html>
