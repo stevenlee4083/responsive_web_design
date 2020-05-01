@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/dce44ee111.js"></script>
-  <!--<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@zaks?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Zak Sakata"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Zak Sakata</span></a>-->
   <link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css"
-
 </head>
   <title>Document</title>
   <style>
@@ -23,7 +21,6 @@
       font-size: 58%;
     }
   }
-
   /* 460px / 16px = 28.75em */
   @media (max-width: 28.75em) {
     html {
@@ -42,21 +39,6 @@
     list-style-type: none;
     direction: ltr;
   }
-  /*.nav a {
-    float: right;
-    display: block;
-  display: inline;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    padding: 7px 8px;
-    text-decoration: none;
-  }*/
-/*  .align {
-    margin: 0px auto;
-    width: auto;
-  }*/
   #navbarpo nav ul{
     margin: 0;
     padding: 0;
@@ -65,7 +47,7 @@
     min-width: 40%;
    }
   #navbarpo nav ul li {
-float: left;
+    float: left;
     color: white;
   }
   #navbarpo nav ul li a {
@@ -75,17 +57,6 @@ float: left;
     padding-bottom: 0;
     text-decoration: none;
   }
-
-
-  /*  #welcome-section {
-  background-color: #035aa6;
-  text-align: center;
-  color: white;
-  margin: 0;
-  }*/
-  /*.clearfix {
-    overflow: auto;
-  }*/
   #projects {
     background-color: #4d3232;
   }
@@ -99,7 +70,9 @@ float: left;
     grid-column-gap: 15px;
     background-size: 100%;
   }
-
+  .grid-container img {
+    width: 80%;
+  }
   .grid-item {
     background-color: rgb(153, 153, 0);
     border: 1px solid rgba(153,153,0,0.2);
@@ -109,11 +82,10 @@ float: left;
   }
   img {
     max-width: 100%;
-height: auto;
-
+    width: auto;
+    height: auto;
     display: block;
-    /*height: auto;
-    vertical-align: middle;*/
+    margin: auto;
   }
   #welcome-section {
     background-image: url("C:/Users/steve/Downloads/nikolay-tarashchenko-u76CN5rZeOU-unsplash.jpg");
@@ -124,7 +96,6 @@ height: auto;
     color: white;
     padding: 30px;
     margin-top: 55px;
-
   }
   .code {
     font-size: 10-px;
@@ -168,6 +139,7 @@ height: auto;
     display: flex;
     background-color: #d8ebb5;
     justify-content: center;
+    height: auto;
   }
   @media (max-width: 28.75em) {
     .projects-section-header {
@@ -216,22 +188,24 @@ height: auto;
     footer p {
       font-size: 10px;
     }
-    .grid-container img {
-      width: 80%;
-    }
+
   }
-  #cover {
+/*  #cover {
     opacity: 0.9;
     width: autofit;
-  }
+  }*/
+  /*<!-- embed img text module-->*/
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
-
+  #intro h1 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+  }
   #pic1 {
     font-family: 'Raleway', Arial, sans-serif;
     position: relative;
     margin: 10px auto;
     min-width: 70%;
-  /*  max-width: 310px;*/
     width: 50%;
     color: #ffffff;=
     text-align: left;
@@ -381,11 +355,7 @@ height: auto;
   .snip1273.hover figcaption:after {
     opacity: 0.1;
   }
-  #intro h1 {
-    text-align: center;
-    color: white;
-    text-decoration: underline;
-  }
+
   @media (max-width:310px) {
     #pic1 h3 {
       font-size: 12px;
@@ -403,13 +373,14 @@ height: auto;
   }
 </style>
 <script type="text/javascript">
-  /* Demo purposes only */
   $(".hover").mouseleave(
     function() {
       $(this).removeClass("hover");
     }
   );
-    </script>
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </head>
 <body>
   <div id="container">
@@ -425,7 +396,6 @@ height: auto;
      </nav>
   </section>
 <section id="welcome-section">
-  <!--<div id="About_Me">-->
     <h1>Steven Lee</h1>
     <p>Web Publishing & Frontend Developer.</p>
     <p>Full Stack JavaScript Developer, soon.</p><br><br>
@@ -443,14 +413,6 @@ height: auto;
   <a href="#"></a>
   <p>Please mouse over image <br> (이미지에 마우스를 올려주세요!)</p>
 </figure>
-<!--<figure class="snip1273 hover">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample21.jpg" alt="sample21" />
-  <figcaption>
-    <h3>Indigo Violet</h3>
-    <p>What's the point of wearing your favorite rocketship underpants if nobody ever asks to see 'em?</p>
-  </figcaption>
-  <a href="#"></a>
-</figure>-->
 <figure id="pic2" class="snip1273">
   <img src="https://stevenlee4083.github.io/images/mike-scaturo-zpJGND-kLfA-unsplash.jpg" alt="desert" />
   <figcaption>
@@ -460,7 +422,6 @@ height: auto;
   </figcaption>
   <a href="#"></a><p>Please mouse over image <br> (이미지에 마우스를 올려주세요!)</p>
 </figure>
-
 </section>
   <section id="My_Certificates" class="sec">
     <h3>Certificates (인증서)</h3><br>
@@ -540,12 +501,8 @@ height: auto;
 <br><br><br>
 <p>My reference</p>
 <a id="profile-link" href="https://github.com/stevenlee4083" target="_blank" class="btn contact-details">My Github Page</a>
-
 </div>
 </section>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 
 <footer>
 <p>&copy;   2020 Created by Steven Lee following guide from freeCodeCamp.  </p>
