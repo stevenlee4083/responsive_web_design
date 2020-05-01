@@ -10,10 +10,113 @@
 </head>
   <title>Document</title>
   <style>
+  /*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* CSS Reset */
   * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  /*  padding: 0;
+    margin: 0;*/
   }
   /* 980px / 16px = 61.25em */
   @media (max-width: 61.25em) {
@@ -24,12 +127,12 @@
   /* 460px / 16px = 28.75em */
   @media (max-width: 28.75em) {
     html {
-      font-size: 55%;
+      font-size: 40%;
     }
   }
-  /* top navbar section*/
+  /* section#1 top navbar section*/
   #navbarpo {
-    /*overflow: hidden;*/
+    overflow: hidden;
     display: block;
     background-color: #422402;
     position: fixed;
@@ -57,144 +160,29 @@
     padding-bottom: 0;
     text-decoration: none;
   }
-  #projects {
-    background-color: #4d3232;
+  @media (max-width:330px) {
+    #navbarpo {
+      width: 330px;
+    }
   }
-  .grid-container {
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns:  repeat(auto-fit, minmax(290px, 1fr));
-    background-color: rgb(127,0,255);
-    padding: 10px;
-    grid-row-gap: 10px;
-    grid-column-gap: 15px;
-    background-size: 100%;
-  }
-  .grid-container img {
-    width: 80%;
-  }
-  .grid-item {
-    background-color: rgb(153, 153, 0);
-    border: 1px solid rgba(153,153,0,0.2);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
-  img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
+  /* navbar end*/
+  /* welcome-section*/
   #welcome-section {
     background-image: url("C:/Users/steve/Downloads/nikolay-tarashchenko-u76CN5rZeOU-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100vh;
+    /*height: auto;*/
     text-align: center;
     color: white;
     padding: 30px;
     margin-top: 55px;
   }
-  .code {
-    font-size: 10-px;
-  }
-  li>a {
-    text-align: justify;
-  }
-  .project-img{
-    width: 100%;
-    object-fit: cover;
-    height: 360px;
-  }
-  .project-title {
-    font-size: 20px;
-  }
-  .contact-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 50vw;
-    background-color:#ffd31d;
-  }
-  .sec {
-    background-color: rgb(127,0,255);
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .sec h3 {
-    color: white;
-  }
-  .projects-section-header {
-    text-align: center;
-    padding-top: 20px;
-    color: white;
-  }
-  footer {
-    display: flex;
-    background-color: #d8ebb5;
-    justify-content: center;
-    height: auto;
-  }
-  @media (max-width: 28.75em) {
-    .projects-section-header {
-      font-size: 4rem;
-      padding: inherit;
-    }
-  }
-  @media (max-width: 30.625em) {
-    .projects-section {
-      padding: 6rem 1rem;
-    }
-
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  @media (max-width: 28.75em) {
-    .contact-section-header > h2 {
-      font-size: 4rem;
-    }
-  }
-  @media (max-width: 700px){
-    .nav a {
-      font-size: 10px;
-    }
-    .project-section {
-      padding: 5px;
-    }
-  }
-  @media screen and (max-width:350px) {
-    .contact-section-header h2 {
-      font-size: 0.8rem;
-    }
-    #projects h2 {
-      font-size: 20px;
-    }
-    @media (max-width: 28.75em) {
-      .nav {
-        justify-content: center;
-      }
-
-      .nav-list {
-        margin: 0 1rem;
-      }
-    }
-    footer p {
-      font-size: 10px;
-    }
-
-  }
-/*  #cover {
-    opacity: 0.9;
-    width: autofit;
-  }*/
-  /*<!-- embed img text module-->*/
+  @media (max-width:350px) {
+    #welcome-section {
+      height: 40vh;
+  }}
+  /*introduction section*/
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
   #intro h1 {
     text-align: center;
@@ -229,8 +217,8 @@
   .snip1273 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all 0.4s ease-in;
-    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
 
   .snip1273 img {
@@ -358,19 +346,171 @@
 
   @media (max-width:310px) {
     #pic1 h3 {
-      font-size: 12px;
+      font-size: 8px;
     }
     #pic2 h3 {
-      font-size: 12px;
+      font-size: 8px;
     }
     #pic1 p {
-      font-size: 8px;
+      font-size: 5px;
     }
     #pic2 p {
-      font-size: 8px;
+      font-size: 5px;
     }
 
   }
+  /* end of introduction*/
+  /* My_Certificates section*/
+  .grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns:  repeat(auto-fit, minmax(290px, 1fr));
+    background-color: rgb(127,0,255);
+    padding: 2px;
+    grid-row-gap: 10px;
+    grid-column-gap: 15px;
+    background-size: 100%;
+  }
+  .grid-container img {
+    width: 80%;
+  }
+  .grid-item {
+    background-color: rgb(153, 153, 0);
+    border: 1px solid rgba(153,153,0,0.2);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .sec {
+    background-color: rgb(127,0,255);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .sec h3 {
+    color: white;
+  }
+  /* end of My_Certificates section*/
+  /*img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }*/
+
+
+  /*.project-img{
+    width: 100%;
+    object-fit: cover;
+    height: 360px;
+  }*/
+  /* project section*/
+  .project-title {
+    font-size: 20px;
+  }
+  .projects-section-header {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+  }
+  /* contact section*/
+  #Contact {
+    padding-bottom: 20px;
+  }
+  #contact {
+    padding-bottom: 20px;
+  }
+  #contact h1 {
+    padding-top: 30px;
+    text-decoration: underline;
+  }
+  .contact-section {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    text-align: center;
+    width: 100%;
+    /*height: 50vw;*/
+    height: auto;
+    background-color:#ffd31d;
+  }
+  .contact-section-header h2, p {
+    padding: 15px;
+  }
+  .contact-section-header h1 {
+padding-top: 60px;
+  }
+  /* footer section*/
+  footer p {
+    font-size: 10px;
+  }
+  footer {
+    text-align: center;
+    background-color: #d8ebb5;
+    justify-content: center;
+    height: auto;
+  }
+
+  .code {
+    font-size: 10-px;
+  }
+  li>a {
+    text-align: justify;
+  }
+
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+      padding: inherit;
+    }
+  }
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 700px){
+    .nav a {
+      font-size: 10px;
+    }
+    .project-section {
+      padding: 5px;
+    }
+  }
+  @media screen and (max-width:350px) {
+    .contact-section-header h2 {
+      font-size: 0.8rem;
+    }
+    #projects h2 {
+      font-size: 20px;
+    }}
+    @media (max-width: 28.75em) {
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-list {
+        margin: 0 1rem;
+      }
+    }
+
+/*  #cover {
+    opacity: 0.9;
+    width: autofit;
+  }*/
+  /*<!-- embed img text module-->*/
+
 </style>
 <script type="text/javascript">
   $(".hover").mouseleave(
@@ -445,7 +585,7 @@
   </div>
 </section>
 <section id="projects" class="projects-section">
-<h2 class="projects-section-header">My portfolio (포트폴리오)</h2><br><br>
+<h2 class="projects-section-header">My portfolio (포트폴리오)</h2>
 <div id="Works" class="grid-container">
 <div class="grid-item">
   <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial14.html" target="_blank" class="project project-tile">
@@ -489,16 +629,18 @@
 </div>
 </div>
 </section>
-<section id="contact" class="contact-section">
+<section id="Contact" class="contact-section">
 <div class="contact-section-header">
+  <h1>Hope to contact you</h1>
 <h2>Seek for chance to work together...</h2>
 <p>With a laptop, let's jump into iT ocean together!</p>
 </div>
-<div id="Contact" class="contact-links">
-  <p>Please! Let me catch your contact information! <br> 연락처 남기시면 즉시 연락 드립니다.</p>
-  <img src="https://img.icons8.com/material-two-tone/2x/secured-letter.png" alt="google form" style="width:88px">
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSc6PT-D4PUje4fhlVyXKZM2ThrIRWX5v_H0xLUlHN8OuytQKQ/viewform?usp=sf_link" target="_blank" class="btn contact-details">Your contact Info!</a>
-<br><br><br>
+<div id="contact" class="contact-links">
+  <p>Please! Let me catch your contact information!</p>
+  <p>연락처 남기시면 즉시 연락 드립니다.</p><br>
+  <img src="https://img.icons8.com/material-two-tone/2x/secured-letter.png" alt="google form" style="width:88px"><br>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc6PT-D4PUje4fhlVyXKZM2ThrIRWX5v_H0xLUlHN8OuytQKQ/viewform?usp=sf_link" target="_blank" class="btn contact-details">Click & Input Your contact Info here!</a><br>
+<br>
 <p>My reference</p>
 <a id="profile-link" href="https://github.com/stevenlee4083" target="_blank" class="btn contact-details">My Github Page</a>
 </div>
