@@ -196,7 +196,7 @@ input, select {
       position: relative;
       margin: 10px auto;
       max-width: 60%;
-      width: 50%;
+      width: 55%;
       color: #ffffff;=
       text-align: left;
       background-color: #000000;
@@ -209,7 +209,7 @@ input, select {
       margin: 10px auto;
       max-width: 60%;
       /*max-width: 310px;*/
-      width: 50%;
+      width: 55%;
       color: #ffffff;
       text-align: left;
       background-color: #000000;
@@ -242,16 +242,16 @@ input, select {
     }
     @media (max-width:400px) {
       .snip1273 figcaption {
-        padding: 20px;
+        padding: 10px;
       }
       .snip1273 figcaption p {
         /*padding-bottom: 5px;*/
         line-height: 120%;
         font-size: 30%;
       }
-      #intro {
+      /*#intro {
         padding-bottom: 30px;
-      }
+      }*/
     }
     .snip1273 figcaption:before,
     .snip1273 figcaption:after {
@@ -367,12 +367,15 @@ input, select {
       }
       #pic2 h3 {
         font-size: 6px;
+        padding: 0;
       }
       #pic1 p {
         font-size: 3px;
+        padding: 0;
       }
       #pic2 p {
         font-size: 3px;
+        padding: 0;
       }
     }
     /* end of introduction*/
@@ -398,6 +401,15 @@ input, select {
       text-align: center;
       vertical-align: bottom;
       text-decoration: none;
+    }
+    .grid-item a1 {
+      position: relative;
+      z-index: 100;
+    }
+    .grid-item a2 {
+      z-index: 200;
+      position: absolute;
+      width: auto;
     }
     #My_Certificates {
       background-color: rgb(127,0,255);
@@ -557,7 +569,7 @@ input, select {
         <h3>이승욱</h3>
         <p>{"현재 웹퍼블리셔 : 미래 자바스크립 풀스텍 개발자";}</p>
       </section>
-      <section id="intro"> <h1>My past, current, future</h1>
+      <section id="intro"> <h1>My Background & Skills (Put mouse on images)</Put></h1>
         <figure id="pic1" class="snip1273">
           <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg" alt="forest" />
           <figcaption>
@@ -594,22 +606,30 @@ input, select {
             <h1>Certificates (인증서)</h1><br>
             <div class="grid-container">
               <div class="grid-item">
-                <img src="https://stevenlee4083.github.io/certificates/HTML_Certificate1.jpg" alt="HTML"></div>
+                <img id="a1" src="https://stevenlee4083.github.io/certificates/HTML_Certificate1.jpg" alt="HTML">
+              <img id="a2" src="https://img.icons8.com/color/2x/html-5.png" alt="HTML" style="width:50px"></div>
                 <div class="grid-item">
-                  <img src="https://stevenlee4083.github.io/certificates/CSS_Certificate1.jpg" alt="CSS"></div>
+                  <img src="https://stevenlee4083.github.io/certificates/CSS_Certificate1.jpg" alt="CSS">
+                <img src="https://img.icons8.com/color/2x/css3.png" alt="CSS" style="width:50px"></div>
                   <div class="grid-item">
-                    <img src="https://stevenlee4083.github.io/certificates/JavaScript_Certificate1.jpg" alt="JavaScript"></div>
+                    <img src="https://stevenlee4083.github.io/certificates/JavaScript_Certificate1.jpg" alt="JavaScript">
+                  <img src="https://img.icons8.com/color/2x/javascript.png" alt="JS" style="width:50px"></div>
                     <div class="grid-item">
-                      <img src="https://stevenlee4083.github.io/certificates/JQuery_Certificate1.jpg" alt="jQuery"></div>
+                      <img src="https://stevenlee4083.github.io/certificates/JQuery_Certificate1.jpg" alt="jQuery">
+                    <img src="https://img.icons8.com/ios-filled/2x/jquery.png" alt="jQuery" style="width:50px"></div>
                       <div class="grid-item">
-                        <img src="https://stevenlee4083.github.io/certificates/PHP_Certificate1.jpg" alt="PHP"></div>
+                        <img src="https://stevenlee4083.github.io/certificates/PHP_Certificate1.jpg" alt="PHP">
+                      <img src="https://img.icons8.com/color/2x/php.png" alt="PHP" style="width:50px"></div>
                         <div class="grid-item">
-                          <img src="https://stevenlee4083.github.io/certificates/SQL_Certificate1.jpg" alt="SQL"></div>
+                          <img src="https://stevenlee4083.github.io/certificates/SQL_Certificate1.jpg" alt="SQL">
+                        <img src="https://img.icons8.com/color/2x/sql.png" alt="SQL" style="width:50px"></div>
                           <div class="grid-item">
-                            <img src="https://stevenlee4083.github.io/certificates/Python_Certificate1.jpg" alt="Python"></div>
+                            <img src="https://stevenlee4083.github.io/certificates/Python_Certificate1.jpg" alt="Python">
+                          <img src="https://img.icons8.com/color/2x/python.png" alt="Python" style="width:50px"></div>
                             <div class="grid-item">
-                              <img src="https://stevenlee4083.github.io/certificates/edx_mits_ssc.jpg" alt="MiTx"></div>
-                            </div>
+                              <img src="https://stevenlee4083.github.io/certificates/edx_mits_ssc.jpg" alt="MiTx">
+                            <img src="https://www.conteenew.com/data/file/artwork/thumb-2040957195_TIKLD8wV_597861a51316eafbaac58da9afefb45003c95a1f_600x310.png" alt="MiT" style="width:50px"></div>
+           </div>
                           </section>
                           <section id="projects" class="projects-section">
                             <h1 class="projects-section-header">My portfolio (포트폴리오)</h1>
@@ -618,9 +638,7 @@ input, select {
                                 <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial14.html" target="_blank" class="project project-tile">
                                   <img class="project-image" src="https://post-phinf.pstatic.net/MjAxODA0MDJfMjQy/MDAxNTIyNjU2NjA0NDQ0.A9bQXwnNGNcJp52La9XX_EpOxVEzonDZiJKT6LznL00g.L-hbaIpxe_8qQxaCJJ8Hla9a9eayRVjIvdCJ0D1keD8g.JPEG/17.jpg?type=w1200" alt="SingyuHyun">
                                   <p class="project-title">
-                                    <!--<span class="code">&lt;</span>-->
                                     Tribute Page <br>애국자 헌정 페이지
-                                  <!--  <span class="code">&#47;&gt;</span>-->
                                   </p>
                                 </a>
                               </div>
@@ -628,9 +646,7 @@ input, select {
                                 <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial22.html" target="_blank" class="project project-tile">
                                   <img class="project-image" src="https://stevenlee4083.github.io/certificates/FCCTRIAL21.png" alt="input page">
                                   <p class="project-title">
-                                    <!--<span class="code">&lt;</span>-->
-                                    User Enquiry Page <br>유저 질문지 페이지
-                                <!--    <span class="code">&#47;&gt;</span>-->
+                                    User Enquiry Page <br>고객 질문지 페이지
                                   </p>
                                 </a>
                               </div>
@@ -638,9 +654,7 @@ input, select {
                                 <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial33.html" target="_blank" class="project project-tile">
                                   <img class="project-image" src="https://stevenlee4083.github.io/certificates/product_landing.png" alt="Product Landing">
                                   <p class="project-title">
-                                    <!--<span class="code">&lt;</span>-->
                                     Product Landing Page <br>신상품 렌딩 페이지
-                                  <!--  <span class="code">&#47;&gt;</span>-->
                                   </p>
                                 </a>
                               </div>
@@ -660,7 +674,7 @@ input, select {
                             <div class="contact-section-header">
                               <h1>Hope to contact you soon!</h1>
                               <h2>Seek for chance to work together!</h2>
-                              <p>["Laptop", "Cooperative", "Passion", "Creative", "Limitless", "No Geo Boudary"]</p>
+                              <p>["Laptop", "Cooperative", "Passion", <br>"Creative", "Limitless", "No Geo Boudary"]</p>
                             </div>
                             <div id="contact" class="contact-links">
                               <p>Please! Let me catch your contact information!</p>
