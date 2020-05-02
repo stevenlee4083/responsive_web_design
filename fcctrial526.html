@@ -156,6 +156,8 @@ input, select {
   }
   #navbarpo nav ul li a {
     display: block;
+    /*position: absolute;*/
+    top: 50px;
     color: white;
     padding-right: 8px;
     padding-bottom: 0;
@@ -168,17 +170,21 @@ input, select {
     }
   }
   /* navbar end*/
-  /* welcome-section*/
+  /* welcome-section*//*<p style="position:relative;">
+    <a name="anchor" style="position:absolute; top:-100px;"></a>
+    I should be 100px below where I currently am!*/
   #welcome-section {
     background-image: url("C:/Users/steve/Downloads/nikolay-tarashchenko-u76CN5rZeOU-unsplash.jpg");
     background-repeat: no-repeat;
+    display: block;
     background-size: 100% 100%;
     height: 100vh;
     /*height: auto;*/
     text-align: center;
+    vertical-align: top;
     color: white;
     padding: 30px;
-    margin-top: 45px;
+    /*margin-top: 45px;*/
   }
   @media (max-width:350px) {
     #welcome-section {
@@ -186,17 +192,21 @@ input, select {
   }}
   /*introduction section*/
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+#intro {
+  background-color: #d8ebb5;
+  padding-top: 50px;
+}
   #intro h1 {
     text-align: center;
-    color: white;
+    color: black;
     text-decoration: underline;
   }
   #pic1 {
     font-family: 'Raleway', Arial, sans-serif;
     position: relative;
     margin: 10px auto;
-    min-width: 70%;
-    width: 50%;
+    max-width: 50%;
+  width: auto;
     color: #ffffff;=
     text-align: left;
     background-color: #000000;
@@ -208,7 +218,7 @@ input, select {
     position: relative;
     margin: 10px auto;
     /*margin-left: 330px;*/
-    min-width: 70%;
+    min-width: 50%;
     /*max-width: 310px;*/
     width: 50%;
     color: #ffffff;
@@ -239,9 +249,17 @@ input, select {
     height: 100%;
     z-index: 1;
     opacity: 0;
-    padding: 20px 30px;
+    padding: 50px 50px;
   }
-
+@media (max-width:400px) {
+  .snip1273 figcaption {
+    padding: 5px 5px;
+  }
+  .snip1273 figcaption p {
+    padding-bottom: 5px;
+    line-height: 120%;
+  }
+}
   .snip1273 figcaption:before,
   .snip1273 figcaption:after {
     width: 1px;
@@ -348,20 +366,26 @@ input, select {
     opacity: 0.1;
   }
 
-  @media (max-width:310px) {
+  @media (max-width:400px) {
     #pic1 h3 {
-      font-size: 8px;
+      font-size: 6px;
     }
     #pic2 h3 {
-      font-size: 8px;
+      font-size: 6px;
     }
     #pic1 p {
-      font-size: 5px;
+      font-size: 3px;
     }
     #pic2 p {
-      font-size: 5px;
+      font-size: 3px;
     }
-
+    /*figcaption h3 {
+      font-size: 20%;
+    }
+    figcaption p {
+      font-size: 20%;
+    }
+*/
   }
   /* end of introduction*/
   /* My_Certificates section*/
@@ -385,14 +409,15 @@ input, select {
     font-size: 30px;
     text-align: center;
   }
-  .sec {
+  #My_Certificates {
     background-color: rgb(127,0,255);
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 5px;
   }
-  .sec h3 {
+  #My_Certificates h1 {
     color: white;
+    font-size: 20px;
   }
   /* end of My_Certificates section*/
   /*img {
@@ -412,7 +437,8 @@ input, select {
   /* project section*/
   #projects {
     margin: 0;
-    padding: 0;
+    padding-top: 35px;
+    background-color: #581c0c;
   }
   .project-title {
     font-size: 20px;
@@ -425,10 +451,11 @@ input, select {
   /* contact section*/
   #Contact {
     padding-bottom: 20px;
+    padding-top: 44px;
   }
-  #contact {
+  /*#contact {
     padding-bottom: 20px;
-  }
+  }*/
   #contact h1 {
     padding-top: 30px;
     text-decoration: underline;
@@ -485,8 +512,11 @@ padding-top: 60px;
     }
   }
   @media (max-width: 28.75em) {
-    .contact-section-header > h2 {
-      font-size: 4rem;
+    .contact-section-header > h1, h2, p {
+      font-size: 5vw;
+    }
+    .contact p {
+      font-size: 8vw;
     }
   }
   @media (max-width: 700px){
@@ -498,11 +528,11 @@ padding-top: 60px;
     }
   }
   @media screen and (max-width:350px) {
-    .contact-section-header h2 {
-      font-size: 0.8rem;
+    .Contact h1, h2, h3, p {
+      font-size: 4vw;
     }
-    #projects h2 {
-      font-size: 20px;
+    #projects h1 {
+      font-size: 18px;
     }}
     @media (max-width: 28.75em) {
       .nav {
@@ -556,24 +586,27 @@ padding-top: 60px;
   <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg" alt="forest" />
   <figcaption>
     <h3>Background</h3>
-    <p>Computer Science. Numerical Analysis. Semiconductor+LCD+Lithium Battery R&D. <br>Now fall into Coding Ocean every day deeper!</p>
-<p>전자계산학졸업 수치해석을 좋아함. 반도체 엘씨디 이차전지 연구원 역임 <br> 현재는 코딩의 Web Development Roadmap을 차분히 걷고있습니다.</p>
+    <p>BS of Computer Science, especially I like Numerical Analysis. I was researcher of Semiconductor+LCD+Lithium Battery R&D.
+    <br>Now fall into Coding Ocean every day deeper and deeper upon Web Development Roadmap, "https://github.com/kamranahmedse".
+    <br>전자계산학졸업 수치해석을 좋아함. 반도체 엘씨디 이차전지 연구원 역임. 현재는 코딩의 Web Development Roadmap을 차분히
+    <br>걷고있습니다.</p>
   </figcaption>
   <a href="#"></a>
-  <p>Please mouse over image <br> (이미지에 마우스를 올려주세요!)</p>
+  <p>Mouse on here!(이미지에 마우스를 올려주세요!)</p>
 </figure>
 <figure id="pic2" class="snip1273">
   <img src="https://stevenlee4083.github.io/images/mike-scaturo-zpJGND-kLfA-unsplash.jpg" alt="desert" />
   <figcaption>
     <h3>Skills and Dream</h3>
-    <p>FORTRAN, ASSEMBLY, HTML, CSS(Bootstrap4) JavaScript(jQuery+AJAX+JSON) PHP SQL Python <br>Very Soon Nodejs React, MongoDB.</p>
-<p>포트란 파스칼이후 HTML,CSS, JavaScript, PHP SQL Python 공부후 현재는 JS 풀스텍 준비중입니다.</p>
+    <p>Now I have skills that FORTRAN, ASSEMBLY, HTML, CSS(Bootstrap4), JavaScript(jQuery+AJAX+JSON), PHP+SQL, Python.
+      <br>Very Soon I'll have Nodejs React, MongoDB. 대학떄 포트란 파스칼이후 현재는 HTML,CSS, JavaScript, PHP+SQL, Python
+      <br>공부후 현재는 JavaScript 풀스텍 준비중입니다.</p>
   </figcaption>
-  <a href="#"></a><p>Please mouse over image <br> (이미지에 마우스를 올려주세요!)</p>
+  <a href="#"></a><p>Mouse on here!(이미지에 마우스를 올려주세요!)</p>
 </figure>
 </section>
   <section id="My_Certificates" class="sec">
-    <h3>Certificates (인증서)</h3><br>
+    <h1>Certificates (인증서)</h1><br>
   <div class="grid-container">
     <div class="grid-item">
      <img src="https://stevenlee4083.github.io/certificates/HTML_Certificate1.jpg" alt="HTML"></div>
@@ -594,7 +627,7 @@ padding-top: 60px;
   </div>
 </section>
 <section id="projects" class="projects-section">
-<h2 class="projects-section-header">My portfolio (포트폴리오)</h2>
+<h1 class="projects-section-header">My portfolio (포트폴리오)</h1>
 <div id="Works" class="grid-container">
 <div class="grid-item">
   <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial14.html" target="_blank" class="project project-tile">
@@ -640,9 +673,9 @@ padding-top: 60px;
 </section>
 <section id="Contact" class="contact-section">
 <div class="contact-section-header">
-  <h1>Hope to contact you</h1>
-<h2>Seek for chance to work together...</h2>
-<p>With a laptop, let's jump into iT ocean together!</p>
+  <h1>Hope to contact you soon!</h1>
+<h2>Seek for chance to work together!</h2>
+<p>["Laptop", "Cooperative", "Passion", "Creative", "Limitless", "No Geo Boudary"]</p>
 </div>
 <div id="contact" class="contact-links">
   <p>Please! Let me catch your contact information!</p>
