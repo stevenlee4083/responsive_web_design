@@ -231,9 +231,16 @@ and (-webkit-min-device-pixel-ratio: 1)
     padding: 1px;
   }
   #welcome-section p {
-    font-size: 110%;
+    font-size: 160%;
     padding: 2px;
+    font-weight: bold;
   }
+/*  #welcome-section {
+    background-image: url("https://stevenlee4083.github.io/images/nikolay-tarashchenko-u76CN5rZeOU-unsplash.jpg");
+/*    filter: blur(8px);
+   -webkit-filter: blur(8px);*/
+  /* opacity: 0.9;
+ } */
 }
 
 /* **********introduction section********** */
@@ -258,7 +265,7 @@ and (-webkit-min-device-pixel-ratio: 1)
   max-width: 60%;
   width: 55%;
   color: #ffffff;
-  =text-align: left;
+  text-align: left;
   background-color: #000000;
   font-size: 16px;
   z-index: 300;
@@ -436,23 +443,23 @@ and (-webkit-min-device-pixel-ratio: 1)
   }
 
   #pic1 h3 {
-    font-size: 8px;
+    font-size: 70%;
     margin: 0;
     padding: 0;
   }
 
   #pic2 h3 {
-    font-size: 8px;
+    font-size: 70%;
     padding: 0;
   }
 
   #pic1 p {
-    font-size: 7px;
+    font-size: 68%;
     padding: 3px;
   }
 
   #pic2 p {
-    font-size: 7px;
+    font-size: 68%;
     padding: 3px;
   }
 }
@@ -548,15 +555,13 @@ text-decoration: none;
 
 /* contact section*/
 #Contact {
-  padding-bottom: 20px;
-  padding-top: 44px;
+  padding-top: 140px;
+  padding-bottom: 110px;
 }
-
 #contact h1 {
-  padding-top: 30px;
+  /*padding-top: 10px;*/
   text-decoration: underline;
 }
-
 .contact-section {
   text-align: center;
   width: 100%;
@@ -565,13 +570,18 @@ text-decoration: none;
   background-image: radial-gradient(#8db1ab 5%, #cee397 20%, #f2ed6f 30%, #f4e04d 45%);
 }
 
-.contact-section-header h2,
-p {
-  padding: 15px;
+.contact-section-header h2, p {
+  padding: 5px;
 }
 
 .contact-section-header h1 {
-  padding-top: 60px;
+  padding-top: 30px;
+}
+@media (max-width: 479px) {
+  .contect-section-header h1,p {
+    font-size: 50%;
+    font-weight: bold;
+  }
 }
 
 /* footer section*/
@@ -594,12 +604,12 @@ li>a {
   text-align: justify;
 }
 
-@media (max-width: 28.75em) {
+/*@media (max-width: 28.75em) {
   .projects-section-header {
     font-size: 4rem;
     padding: inherit;
   }
-}
+}*/
 
 @media (max-width: 30.625em) {
   .projects-section {
@@ -611,7 +621,7 @@ li>a {
   }
 }
 
-@media (max-width: 28.75em) {
+/*@media (max-width: 28.75em) {
 
   .contact-section-header>h1,
   h2,
@@ -622,7 +632,7 @@ li>a {
   .contact p {
     font-size: 8vw;
   }
-}
+}*/
 
 @media (max-width: 600px) {
   .nav a {
@@ -643,11 +653,8 @@ li>a {
     width: auto;
   }
 
-  .Contact h1,
-  h2,
-  h3,
-  p {
-    font-size: 5vw;
+  .Contact h1, h2, h3, p {
+    font-size: 80%;
   }
 
   #projects h1 {
@@ -823,9 +830,8 @@ $(".hover").mouseleave(
                         </section>
                         <section id="Contact" class="contact-section">
                           <div class="contact-section-header">
-                            <h1>Hope to contact you soon!</h1>
-                            <h2>Seek for chance to work together!</h2>
-                            <p>["Laptop", "Cooperative", "Passion", <br>"Creative", "Limitless", "No Geo Boudary"]</p>
+                            <h1>Hope to contact you soon! So getting chance to work with you!</h1>
+                            <p>["Laptop", "Cooperative", "Passion", "Creative", "Limitless", "No Geo Boudary"]</p>
                           </div>
                           <div id="contact" class="contact-links">
                             <p>Please! Let me catch your contact information!</p>
