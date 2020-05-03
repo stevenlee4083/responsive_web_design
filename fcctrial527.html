@@ -193,7 +193,15 @@ select {
   padding-top: 30px;
   margin-top: 45px;
 }
-
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)
+{#welcome-section {
+  height: 80vh;
+  padding-top: 50px;
+  font-size: 120%
+} }
 @media (max-width:991px) {
   #welcome-section {
     height: 80vh;
@@ -635,7 +643,7 @@ li>a {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 80px;
   z-index: 99;
   font-size: 15px;
   border: none;
