@@ -128,6 +128,13 @@ input, select {
   list-style-type: none;
   direction: ltr;
 }
+
+#navbarpo nav ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #navbarpo nav ul {
   margin: 0;
   padding: 0;
@@ -169,7 +176,7 @@ input, select {
   padding-top: 30px;
   margin-top: 45px;
 }
-@media (max-width:400px) {
+@media (max-width:600px) {
   #welcome-section {
     height: 40vh;
     padding-top: 50px;
