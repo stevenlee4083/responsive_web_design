@@ -693,6 +693,34 @@ li>a {
 #myBtn:hover {
   background-color: #555;
 }
+/* *************** fixed sticker to contact ****************/
+.icon-bar {
+  position: fixed;
+  top: 90%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: tomato;
+  font-size: 35px;
+}
+
+.icon-bar a:hover {
+  background-color: darkblue;
+  border-radius: 50%;
+}
+
+#Contact {
+  background: #ffd31d;
+  color: darkblue;
+}
+
 </style>
 <script type="text/javascript">
 $(".hover").mouseleave(
@@ -739,8 +767,8 @@ $(".hover").mouseleave(
             <br>deeper and deeper upon Web Development
             <br>Roadmap, "https://github.com/kamranahmedse".
             <br>컴퓨터 학과 졸업 수치해석을 좋아함. 반도체 엘씨디
-            <br>이차전지 연구원 역임. 현재는 코딩의 Web Development
-            <br>Roadmap을 차분히 가고 있습니다.</p>
+            <br>이차전지 연구원 역임. 현재는 코딩의 Web
+            <br>Development Roadmap을 차분히 가고 있습니다.</p>
           </figcaption>
           <a href="#"></a>
           <p>Mouse on here (마우스 올려주세요)</p>
@@ -752,7 +780,7 @@ $(".hover").mouseleave(
             <p>Now I have skills that FORTRAN, ASSEMBLY,
               <br>HTML,CSS(Bootstrap4), JavaScript(jQuery+
               <br>AJAX+JSON),PHP+SQL, Python. Very Soon I
-              <br>will have Nodejs React,MongoDB. 대학떄
+              <br>will have Nodejs React,MongoDB.
               <br>포트란 파스칼이후 현재는 HTML,CSS,
               <br>JavaScript, PHP+SQL, Python 공부후 현재는
               <br>JavaScript 풀스텍 준비중입니다.</p>
@@ -843,6 +871,7 @@ $(".hover").mouseleave(
                             <a id="profile-link" href="https://stevenlee4083.github.io/responsive_web_design" target="_blank" class="btn contact-details">My Github Page</a>
                           </div>
                         </section>
+                        <div class="icon-bar"><a href="#Contact" class="contact"><i class="fa fa-fw fa-phone-square"></i></a></div>
 
                         <footer>
                           <p>&copy; 2020 Created by Steven Lee following guide from freeCodeCamp. </p>
