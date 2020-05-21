@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      font-family: Verdana;
+      font-size: 90%;
+      background: #d0d0d0;
+      width: 26px;
+      height: 20px;
+      position: absolute;
+      vertical-align: center;
+      text-align: center;
+    }
+
+    .box:hover {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+<div class="box">Hello World</div>
+  <script>
+    var n = 32;
+    for (var i = 0; i < n; ++i) {
+      var d = document.createElement('div');
+      var r = 360 * i / n;
+      var s = 'translate(200px,200px) rotate(' + r + 'deg) translate(0px, -180px)';
+      d.setAttribute('class', 'box');
+      d.setAttribute('style', '-webkit-transform:' + s);
+      var t = document.createTextNode(i);
+      d.appendChild(t);
+      document.body.appendChild(d);
+    }
+  </script>
+</body>
+
+</html>
