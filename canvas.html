@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>marrygoround sample</title>
+  <style>
+  .sun{
+    width:400px;
+    height:300px;
+    position:absolute;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name:orbit;
+    -webkit-animation-duration:20s;
+    top:116px;
+    left:160px;
+    z-index: 3;
+  }
+  .dot{
+    position:absolute;
+    top:0;
+    left:0;
+    width:38px;
+    height:38px;
+    background:green;
+    border-radius:50%;
+  }
+  @-webkit-keyframes orbit {
+    from { -webkit-transform:rotate(0deg) }
+    to { -webkit-transform:rotate(360deg) } }
+
+    #c {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 3;
+    }
+    img {position: absolute; z-index: 300; top: 120px; left: 216px;}
+  </style>
+</head>
+<body>
+  <img src="C:/Users/steve/OneDrive/사진/spepri.png" alt="">
+  <div class="sun"><div class="dot"></div></div>
+  <canvas id="c" width="700" height="520">
+    <script> //marryGoRound Outer
+    var canvas = document.getElementById('c');
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width;
+    var h = canvas.height;
+    var r1 = Math.min(w, h) * 0.47;    // outer radius
+    var r0 = r1 - 40;                 // inner radius
+    var n = 64;                       // number of blocks
+    var theta = 2 * Math.PI / n;
+    var phi = theta * 0.20;           // relative half-block width
+
+    ctx.save();
+    ctx.fillStyle = '#679b9b';
+    ctx.translate(w / 2, h / 2);      // move to center of circle
+
+    for (var i = 0; i < n; ++i) {
+      ctx.beginPath();
+      ctx.arc(0, 0, r0, -phi, phi);
+      ctx.arc(0, 0, r1, phi, -phi, true);
+      ctx.fill();
+      ctx.rotate(theta);            // rotate the coordinates by one block
+    }
+    ctx.restore();
+    </script>
+
+    <script>
+    var img = document.createElement('img');
+    img.onload = function () {
+      context.drawImage(this,400,400);
+    };
+    img.src = 'C:/Users/steve/OneDrive/사진/spepri.png';
+  </script>
+  </html>
