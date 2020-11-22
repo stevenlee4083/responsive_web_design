@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" type="image/png"
+    href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+  <link rel="mask-icon" type=""
+    href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+    color="#111" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<title>Trumbone Landing Page</title>
+<style>
+  @import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+  body {
+    background-color: cornsilk;
+  }
+
+  #header {
+    display: flex;
+    background-color: rgb(216, 130, 37);
+  }
+
+  #header .logo {
+    flex: 1;
+  }
+
+  #header .logo #header-img {
+    margin-top: 15px;
+    width: 150px;
+  }
+
+  #header #nav-bar {
+    flex: 3;
+  }
+
+  @meida (max-width: 700px) {
+    #hero {
+      position: relative;
+    }
+  }
+
+  @media (max-width:650px) {
+    .loge {
+      margin-top: 15px;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  #frst {
+    margin-top: 8px;
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+  }
+
+  #frst .nav-link {
+    flex: 3;
+  }
+
+  @media (max-width: 650px) {
+    nav>ul {
+      flex-direction: column;
+    }
+  }
+
+  a,
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  form {
+    margin-bottom: 100px;
+  }
+
+  .icon {
+    width: 20%;
+  }
+
+  @media (max-width:720px) {
+    .icon {
+      display: none;
+    }
+  }
+
+  @media (max-width:600px) {
+    #header {
+      flex-wrap: wrap;
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: lightgray;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  #hero>h2 {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+
+  #hero input[type="email"] {
+    max-width: 275px;
+    width: 100%;
+    padding: 8px;
+  }
+
+  #hero input[type="submit"] {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  #hero input[type="submit"]:hover {
+    background-color: tomato;
+    transition: background-color 0.3s;
+  }
+
+  @media (max-width: 650px) {
+    #hero {
+      margin-top: 120px;
+    }
+  }
+
+  @media (max-width:650px) {
+    .nav {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+
+    }
+  }
+
+  @media (max-width:550px) {
+    #features .desc {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      height: 150px;
+    }
+
+    #video {
+      width: 290px;
+    }
+  }
+
+  .desc {
+    width: 70%;
+  }
+
+  .desc>h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    vertical-align: sub;
+  }
+
+  .desc>p {
+    margin-top: 0;
+    padding-top: 0;
+    vertical-align: top;
+    line-height: 1em;
+    height: 2em;
+    overflow: hidden;
+  }
+
+  #features {
+    margin: 15px;
+    background-color: rgb(140, 208, 148);
+  }
+
+  @media (max-width:650px) {
+    #features {
+      margin-top: 0;
+    }
+  }
+
+  #how-it-works {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .grid {
+    display: flex;
+    margin: auto;
+  }
+
+  #pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+
+  .btn {
+    background-color: yellow;
+    width: 80px;
+    border: 1px slid tomato;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .btn:hover {
+    background-color: blue;
+    color: cornsilk;
+  }
+
+  @media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width:650px) {
+    .hero {
+      margin-top: 120px;
+      position: relative;
+    }
+  }
+
+  footer {
+    margin-top: 20px;
+    background-color: #ddd;
+    padding: 10px;
+  }
+
+  footer>ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  footer>ul>li {
+    padding: 0 5px;
+  }
+
+  footer>span {
+    margin-top: 1px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .product>.level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  ol {
+    text-align: left;
+  }
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    z-index: 5000;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #b83b5e;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  #myBtn:hover {
+    background-color: #555;
+  }
+</style>
+
+<body>
+  <header id="header">
+    <div class="logo">
+      <img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png"
+        alt="original trombone Logo">
+    </div>
+    <nav id="nav-bar">
+      <ul id="frst">
+        <li><a class="nav-link" href="#features">Original의 특징</a></li>
+        <li><a class="nav-link" href="#how-it-works">연주 실황</a></li>
+        <li><a class="nav-link" href="#pricing">트럼본 및 부속품</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Handcrafted, home-made masterpieces</h2>
+    <h3>트럼본 제작 명인의 수제작 걸작선</h3>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input name="email" id="email" type="email" placeholder="이메일 입력으로 간단히 시작하기" required />
+      <input id="submit" type="submit" value="Get Started" class="btn" />
+    </form>
+  </section><br>
+  <div class="container"><br <section id="features">
+    <div class="grid">
+      <div class="icon">
+        <img src="https://img.icons8.com/color/2x/modern-statue.png" alt="torch">
+      </div>
+      <div class="desc">
+        <h2 class="menu">Premium Materials</h2><br>
+        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your
+          purchase.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="icon">
+        <img src="https://img.icons8.com/color/2x/truck.png" alt="torch">
+      </div>
+      <div class="desc">
+        <h2 class="menu">Fast Shipping</h2><br>
+        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns
+          if you are not satisfied.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="icon">
+        <img src="https://img.icons8.com/ios-filled/2x/full-battery.png" alt="torch">
+      </div>
+      <div class="desc">
+        <h2 class="menu">Quality Assurance</h2><br>
+        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the
+          pitch of your instrument.</p>
+      </div>
+    </div>
+
+    </section>
+    <section id="how-it-works">
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/HwWQUXnD0oo" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <h4 style="text-align: center;">다양한 종류 및 부속품</h4>
+    <sction id="pricing">
+      <div class="product" id="tenor">
+        <div class="level">Tenor Trombone</div>
+        <h2>$600</h2>
+        <div>
+          <img src="https://github.com/stevenlee4083/images.git/trombone.jpg" alt="Tenor Trombone">
+        </div>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="base">
+        <div class="level">Base Trombone</div>
+        <h2>$900</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="valve">
+        <div class="level">Alto Trombone</div>
+        <h2>$1200</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+    </sction>
+    </section>
+    <sction id="pricing">
+      <div class="product" id="valve">
+        <div class="level">Trombone Mute</div>
+        <h2>$80</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="valve">
+        <div class="level">Valve Trombone</div>
+        <h2>$1200</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="valve">
+        <div class="level">Valve Trombone</div>
+        <h2>$1200</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+
+    </sction>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2016, Original. from freeCodeCamp 2020 by Steven Lee.</span>
+    </footer>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top!</button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+
+</html>
