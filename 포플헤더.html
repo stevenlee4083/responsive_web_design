@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css" <script src="https://kit.fontawesome.com/dce44ee111.js">
+    <link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css" <script
+        src="https://kit.fontawesome.com/dce44ee111.js">
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -14,7 +15,7 @@
 <style>
     /* html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
-    
+
     html,
     body,
     div,
@@ -92,11 +93,11 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         vertical-align: baseline;
         background: transparent;
     }
-    
+
     body {
         line-height: 1;
     }
-    
+
     article,
     aside,
     details,
@@ -110,16 +111,16 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
     section {
         display: block;
     }
-    
+
     nav ul {
         list-style: none;
     }
-    
+
     blockquote,
     q {
         quotes: none;
     }
-    
+
     blockquote:before,
     blockquote:after,
     q:before,
@@ -127,7 +128,7 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         content: '';
         content: none;
     }
-    
+
     a {
         margin: 0;
         padding: 0;
@@ -135,38 +136,41 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         vertical-align: baseline;
         background: transparent;
     }
+
     /* change colours to suit your needs */
-    
+
     ins {
         background-color: #ff9;
         color: #000;
         text-decoration: none;
     }
+
     /* change colours to suit your needs */
-    
+
     mark {
         background-color: #ff9;
         color: #000;
         font-style: italic;
         font-weight: bold;
     }
-    
+
     del {
         text-decoration: line-through;
     }
-    
+
     abbr[title],
     dfn[title] {
         border-bottom: 1px dotted;
         cursor: help;
     }
-    
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
     }
+
     /* change border colour to suit your needs */
-    
+
     hr {
         display: block;
         height: 1px;
@@ -175,62 +179,65 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         margin: 1em 0;
         padding: 0;
     }
-    
+
     input,
     select {
         vertical-align: middle;
     }
+
     /* ******************************************** CSS Reset********************************************** */
-    
+
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
+
     /* 980px / 16px = 61.25em */
-    
+
     @media (max-width: 61.25em) {
         html {
             font-size: 58%;
         }
     }
+
     /* 460px / 16px = 28.75em */
-    
+
     @media (max-width: 28.75em) {
         html {
             font-size: 35%;
         }
     }
-    
+
     @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
         body {
             box-sizing: border-box;
         }
     }
+
     /* **********introduction section********** */
-    
+
     @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+    .head,
+    .info {
+        text-align: center;
+        background-color: rgb(243, 182, 12);
+    }
+
     #intro {
         display: flex;
         justify-content: space-around;
         background-color: #d8ebb5;
-        /*padding-top: 10px;*/
         font-size: 20px;
     }
-    
-    #intro h1 {
-        text-align: center;
-        color: black;
-        text-decoration: underline;
-    }
-    
+
     #pic1 {
         flex: 1;
         font-family: 'Raleway', Arial, sans-serif;
         position: relative;
         margin: 10px auto;
         max-width: 45%;
-        max-height: 300px;
         width: 25%;
         color: #ffffff;
         text-align: left;
@@ -238,10 +245,9 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         font-size: 16px;
         z-index: 300;
         object-fit: cover;
-        /* max-width: 100%;
-        max-height: 100%;*/
+        border: 3px solid blue;
     }
-    
+
     #pic2 {
         flex: 1;
         font-family: 'Raleway', Arial, sans-serif;
@@ -252,28 +258,38 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         color: #ffffff;
         text-align: left;
         background-color: #000000;
-        border: 1px solid tomato;
+        border: 3px solid tomato;
         font-size: 16px;
         z-index: 300;
-        object-fit: cover;
-        /* max-width: 100%;
-        max-height: 100%;*/
+        /*  object-fit: cover;*/
     }
-    
+
+    #intro #pic1 img {
+        object-fit: cover;
+        height: 510px;
+        object-fit: cover;
+    }
+
+    #intro #pic2 img {
+        object-fit: cover;
+        height: 510px;
+        object-fit: cover;
+    }
+
     .snip1273 * {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         -webkit-transition: all 0.5s ease-in;
         transition: all 0.5s ease-in;
     }
-    
+
     .snip1273 img {
         position: relative;
         max-width: 100%;
         vertical-align: top;
         object-fit: cover;
     }
-    
+
     .snip1273 figcaption {
         position: absolute;
         top: 0;
@@ -284,63 +300,54 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         opacity: 0;
         padding: 50px 50px;
     }
-    
+
     @media (max-width:600px) {
         .snip1273 figcaption {
             padding: 2px;
         }
+
         .snip1273 figcaption p {
             /*padding-bottom: 5px;*/
             line-height: 120%;
             font-size: 30%;
         }
-        /*#intro {
-  padding-bottom: 30px;
-  }*/
+
     }
-    
+
     .snip1273 figcaption:before,
     .snip1273 figcaption:after {
         width: 1px;
         height: 0;
     }
-    
+
     .snip1273 figcaption:before {
         right: 0;
         top: 0;
     }
-    
+
     .snip1273 figcaption:after {
         left: 0;
         bottom: 0;
     }
-    
+
     .snip1273 h3,
     .snip1273 p {
         line-height: 1.5em;
     }
-    
+
     .snip1273 h3 {
         margin: 0 0 5px;
         font-weight: 700;
         text-transform: uppercase;
     }
-    
+
     .snip1273 p {
         font-size: 0.8em;
         font-weight: 500;
         margin: 0 0 15px;
     }
-    
-    .snip1273 a {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 1;
-    }
-    
+
+
     .snip1273:before,
     .snip1273:after,
     .snip1273 figcaption:before,
@@ -353,47 +360,47 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
         transition: all 0.4s ease-in;
         opacity: 0.8;
     }
-    
+
     .snip1273:before,
     .snip1273:after {
         height: 1px;
         width: 0%;
     }
-    
+
     .snip1273:before {
         top: 0;
         left: 0;
     }
-    
+
     .snip1273:after {
         bottom: 0;
         right: 0;
     }
-    
+
     .snip1273:hover img,
     .snip1273.hover img {
         opacity: 0.4;
     }
-    
+
     .snip1273:hover figcaption,
     .snip1273.hover figcaption {
         opacity: 1;
     }
-    
+
     .snip1273:hover figcaption:before,
     .snip1273.hover figcaption:before,
     .snip1273:hover figcaption:after,
     .snip1273.hover figcaption:after {
         height: 100%;
     }
-    
+
     .snip1273:hover:before,
     .snip1273.hover:before,
     .snip1273:hover:after,
     .snip1273.hover:after {
         width: 100%;
     }
-    
+
     .snip1273:hover:before,
     .snip1273.hover:before,
     .snip1273:hover:after,
@@ -404,41 +411,42 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
     .snip1273.hover figcaption:after {
         opacity: 0.1;
     }
-    
+
     @media (max-width:476px) {
         #intro h1 {
             font-size: 70%;
             padding: 0;
             margin: 0;
         }
-        /*#pic1,
-            #pic2 {
-                width: 450px;
-            }*/
+
         #pic1 h3 {
             font-size: 70%;
             margin: 0;
             padding: 0;
         }
+
         #pic2 h3 {
             font-size: 70%;
             padding: 0;
         }
+
         #pic1 p {
             font-size: 68%;
             padding: 3px;
         }
+
         #pic2 p {
             font-size: 68%;
             padding: 3px;
         }
     }
+
     /* ***********************************************************end of introduction*/
     /* ***************************** 경력 기술 세션 ************************/
 </style>
 <script type="text/javascript">
     $(".hover").mouseleave(
-        function() {
+        function () {
             $(this).removeClass("hover");
         }
     );
@@ -449,10 +457,12 @@ Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
 
 <body>
     <div id="container">
-        <h1>이력과 기술</h1>
+        <h1 class="head">이력과 기술</h1>
+        <p class="info">그림위로 마우스를 올려주세요!</p>
         <section id="intro">
             <figure id="pic1" class="snip1273">
-                <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg" alt="forest" />
+                <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg"
+                    alt="forest" />
                 <figcaption>
                     <h3>Background</h3>
                     <p>동국대학교 전자계산학 학사
