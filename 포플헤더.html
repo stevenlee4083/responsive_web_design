@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css" <script src="https://kit.fontawesome.com/dce44ee111.js">
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<title>Document</title>
+<style>
+    /* html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
+    
+    html,
+    body,
+    div,
+    span,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    abbr,
+    address,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    sub,
+    sup,
+    var,
+    b,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    blockquote,
+    q {
+        quotes: none;
+    }
+    
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    
+    a {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+    /* change colours to suit your needs */
+    
+    ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+    }
+    /* change colours to suit your needs */
+    
+    mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+    }
+    
+    del {
+        text-decoration: line-through;
+    }
+    
+    abbr[title],
+    dfn[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* change border colour to suit your needs */
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #cccccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    input,
+    select {
+        vertical-align: middle;
+    }
+    /* ******************************************** CSS Reset********************************************** */
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    /* 980px / 16px = 61.25em */
+    
+    @media (max-width: 61.25em) {
+        html {
+            font-size: 58%;
+        }
+    }
+    /* 460px / 16px = 28.75em */
+    
+    @media (max-width: 28.75em) {
+        html {
+            font-size: 35%;
+        }
+    }
+    
+    @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+        body {
+            box-sizing: border-box;
+        }
+    }
+    /* **********introduction section********** */
+    
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+    #intro {
+        display: flex;
+        justify-content: space-around;
+        background-color: #d8ebb5;
+        /*padding-top: 10px;*/
+        font-size: 20px;
+    }
+    
+    #intro h1 {
+        text-align: center;
+        color: black;
+        text-decoration: underline;
+    }
+    
+    #pic1 {
+        flex: 1;
+        font-family: 'Raleway', Arial, sans-serif;
+        position: relative;
+        margin: 10px auto;
+        max-width: 45%;
+        max-height: 300px;
+        width: 25%;
+        color: #ffffff;
+        text-align: left;
+        background-color: #000000;
+        font-size: 16px;
+        z-index: 300;
+        object-fit: cover;
+        /* max-width: 100%;
+        max-height: 100%;*/
+    }
+    
+    #pic2 {
+        flex: 1;
+        font-family: 'Raleway', Arial, sans-serif;
+        position: relative;
+        margin: 10px auto;
+        max-width: 45%;
+        width: 25%;
+        color: #ffffff;
+        text-align: left;
+        background-color: #000000;
+        border: 1px solid tomato;
+        font-size: 16px;
+        z-index: 300;
+        object-fit: cover;
+        /* max-width: 100%;
+        max-height: 100%;*/
+    }
+    
+    .snip1273 * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+    
+    .snip1273 img {
+        position: relative;
+        max-width: 100%;
+        vertical-align: top;
+        object-fit: cover;
+    }
+    
+    .snip1273 figcaption {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        padding: 50px 50px;
+    }
+    
+    @media (max-width:600px) {
+        .snip1273 figcaption {
+            padding: 2px;
+        }
+        .snip1273 figcaption p {
+            /*padding-bottom: 5px;*/
+            line-height: 120%;
+            font-size: 30%;
+        }
+        /*#intro {
+  padding-bottom: 30px;
+  }*/
+    }
+    
+    .snip1273 figcaption:before,
+    .snip1273 figcaption:after {
+        width: 1px;
+        height: 0;
+    }
+    
+    .snip1273 figcaption:before {
+        right: 0;
+        top: 0;
+    }
+    
+    .snip1273 figcaption:after {
+        left: 0;
+        bottom: 0;
+    }
+    
+    .snip1273 h3,
+    .snip1273 p {
+        line-height: 1.5em;
+    }
+    
+    .snip1273 h3 {
+        margin: 0 0 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .snip1273 p {
+        font-size: 0.8em;
+        font-weight: 500;
+        margin: 0 0 15px;
+    }
+    
+    .snip1273 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .snip1273:before,
+    .snip1273:after,
+    .snip1273 figcaption:before,
+    .snip1273 figcaption:after {
+        position: absolute;
+        content: '';
+        background-color: #ffffff;
+        z-index: 1;
+        -webkit-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+        opacity: 0.8;
+    }
+    
+    .snip1273:before,
+    .snip1273:after {
+        height: 1px;
+        width: 0%;
+    }
+    
+    .snip1273:before {
+        top: 0;
+        left: 0;
+    }
+    
+    .snip1273:after {
+        bottom: 0;
+        right: 0;
+    }
+    
+    .snip1273:hover img,
+    .snip1273.hover img {
+        opacity: 0.4;
+    }
+    
+    .snip1273:hover figcaption,
+    .snip1273.hover figcaption {
+        opacity: 1;
+    }
+    
+    .snip1273:hover figcaption:before,
+    .snip1273.hover figcaption:before,
+    .snip1273:hover figcaption:after,
+    .snip1273.hover figcaption:after {
+        height: 100%;
+    }
+    
+    .snip1273:hover:before,
+    .snip1273.hover:before,
+    .snip1273:hover:after,
+    .snip1273.hover:after {
+        width: 100%;
+    }
+    
+    .snip1273:hover:before,
+    .snip1273.hover:before,
+    .snip1273:hover:after,
+    .snip1273.hover:after,
+    .snip1273:hover figcaption:before,
+    .snip1273.hover figcaption:before,
+    .snip1273:hover figcaption:after,
+    .snip1273.hover figcaption:after {
+        opacity: 0.1;
+    }
+    
+    @media (max-width:476px) {
+        #intro h1 {
+            font-size: 70%;
+            padding: 0;
+            margin: 0;
+        }
+        /*#pic1,
+            #pic2 {
+                width: 450px;
+            }*/
+        #pic1 h3 {
+            font-size: 70%;
+            margin: 0;
+            padding: 0;
+        }
+        #pic2 h3 {
+            font-size: 70%;
+            padding: 0;
+        }
+        #pic1 p {
+            font-size: 68%;
+            padding: 3px;
+        }
+        #pic2 p {
+            font-size: 68%;
+            padding: 3px;
+        }
+    }
+    /* ***********************************************************end of introduction*/
+    /* ***************************** 경력 기술 세션 ************************/
+</style>
+<script type="text/javascript">
+    $(".hover").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>이력과 기술</h1>
+        <section id="intro">
+            <figure id="pic1" class="snip1273">
+                <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg" alt="forest" />
+                <figcaption>
+                    <h3>Background</h3>
+                    <p>동국대학교 전자계산학 학사
+                        <br>반도체 공정기술 엔지니어
+                        <br>반도체 공정개발 수석연구원
+                        <br>LCD(OLED) 공정장비 개발
+                        <br>이차전지 전극재료 개발
+                        <br>Sololearn Coding 교육 수료
+                        <br>freeCodeCamp Coding 교육 수료
+                        <br>MiT Scratch 교육 수료
+                        <br>EDX Machine Learning 교육 수료</p>
+                </figcaption>
+            </figure>
+            <figure id="pic2" class="snip1273">
+                <img src="https://stevenlee4083.github.io/images/mike-scaturo-zpJGND-kLfA-unsplash.jpg" alt="desert" />
+                <figcaption>
+                    <h3>Technology Skills</h3>
+                    <p>UX/UI Photoshop, Adobe XD,
+                        <br>HTML, CSS, JavaScript
+                        <br>Bootstrap4, SCSS(Sass)
+                        <br>jQuery, AJAX, JSON
+                        <br>npm Creative-react-App React Node.js
+                        <br>Apache PHP MySQL
+                        <br>Machine Learning.</p>
+                </figcaption>
+            </figure>
+        </section>
+    </div>
+
+</body>
+
+</html>
