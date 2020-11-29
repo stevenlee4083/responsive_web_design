@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.littlesnippets.net/css/codepen-result.css">
+    <script src="https://kit.fontawesome.com/dce44ee111.js"> </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="portfolio201128.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Portfolio Document</title>
+
+    <script type="text/javascript">
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="topnav" id="myTopnav">
+            <a href="#welcome-section" target="_self"><i class="fa fa-fw fa-home"></i> 홈</a>
+            <a href="#intro"><i class='far fa-user'></i> 자기소개</a>
+            <a href="#My_Certificates"><i class='far fa-folder-open'></i></i> 기술인증서모음</a>
+            <a href="#projects"><i class="fa fa-tv"></i> 포트폴리오</a>
+            <a href="#Contact"><i class="fa fa-fw fa-phone-square"></i> 연락처</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <section id="welcome-section">
+            <br>
+            <h1>Steven Lee</h1>
+            <p>Web Publisher & Frontend Developer </p>
+            <h3>이승욱</h3>
+            <p>현재 웹퍼블리셔, 미래 자바스크립 풀스텍 개발자</p>
+        </section>
+        <section id="intro"><br><br>
+            <h1>My Background & Skills</h1>
+            <figure id="pic1" class="snip1273">
+                <img src="https://stevenlee4083.github.io/images/rinze-van-dellen-Z9VkHGcS-FA-unsplash.jpg"
+                    alt="forest" />
+                <figcaption>
+                    <h3>Background</h3>
+                    <p>동국대학교 전자계산학 학사
+                        <br>반도체 공정기술 엔지니어,
+                        <br>반도체 공정개발 수석연구원,
+                        <br>엘시디(OLED) 공정 장비 개발,
+                        <br>이차전지 전극재료 연구 개발,
+                        <br>MITx 고체화학 수료,
+                        <br>SoloLearn Coding 수료,
+                        <br>freeCodeCamp 반응형웹 수료,
+                        <br>Machine Learning 수료.
+                        <br>Cyber Security Company 인턴.</p>
+                </figcaption>
+                <a href="#"></a>
+                <p>Mouse on here (마우스 올려주세요)</p>
+            </figure>
+            <figure id="pic2" class="snip1273">
+                <img src="https://stevenlee4083.github.io/images/mike-scaturo-zpJGND-kLfA-unsplash.jpg" alt="desert" />
+                <figcaption>
+                    <h3>Skills and Dream</h3>
+                    <p>UX/UI Photoshop, Adobe XD,
+                        <br>HTML,CSS(Bootstrap4+SCSS Sass),
+                        <br>JavaScript(jQuery+AJAX+JSON),
+                        <br>Node.js npm creative-react-app React,
+                        <br>Apache phpMyAdmin PHP, SQL,
+                        <br>VS Code, Sourcetree, Github+Git, Github Desktop,
+                        <br>Python, Machine Learning.</p>
+                </figcaption>
+                <a href="#"></a>
+                <p>Mouse on here (마우스 올려주세요)</p>
+            </figure>
+        </section>
+        <section id="My_Certificates" class="sec">
+            <h1>Certificates (인증서)</h1>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                    <li data-target="#demo" data-slide-to="6"></li>
+                    <li data-target="#demo" data-slide-to="7"></li>
+                    <li data-target="#demo" data-slide-to="8"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://stevenlee4083.github.io/certificates/HTML_Certificate1.jpg" alt="HTML">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/CSS_Certificate1.jpg" alt="CSS">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/JavaScript_Certificate1.jpg"
+                            alt="JavaScript">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/JQuery_Certificate1.jpg" alt="jQuery">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/PHP_Certificate1.jpg" alt="PHP">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/SQL_Certificate1.jpg" alt="SQL">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/Python_Certificate1.jpg" alt="Python">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/certificates/edx_mits_ssc.jpg" alt="MITx">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://stevenlee4083.github.io/images/FCC_responsive_web_design.png" alt="RWD">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+        <!--  ********************************************************************************* Certificate Carousel End -->
+        <section id="projects" class="projects-section">
+            <h1 class="projects-section-header">My portfolio (포트폴리오)</h1>
+            <div id="Works" class="grid-container">
+                <div class="grid-item">
+                    <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial14.html" target="_blank"
+                        class="project project-tile">
+                        <img class="project-image"
+                            src="C:\Users\steve\Downloads\screencapture-file-C-Users-steve-OneDrive-html-2020-11-28-21_51_44 헌정.png"
+                            alt="SingyuHyun">
+                        <p class="project-title">애국자 헌정 페이지, Click!</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial22.html" target="_blank"
+                        class="project project-tile">
+                        <img class="project-image"
+                            src="C:\Users\steve\Downloads\screencapture-file-C-Users-steve-OneDrive-html-2020-11-28-21_52_56설문.png"
+                            alt=" input page">
+                        <p class="project-title">고객 질문지 페이지, Click!</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial33.html" target="_blank"
+                        class="project project-tile">
+                        <img class="project-image"
+                            src="C:\Users\steve\Downloads\screencapture-file-C-Users-steve-OneDrive-html-2020-11-28-21_54_15 trombone.png"
+                            alt="Product Landing">
+                        <p class="project-title">신상품 랜딩 페이지, Click!</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://stevenlee4083.github.io/responsive_web_design/fcctrial41.html" target="_blank"
+                        class="project project-tile">
+                        <img class="project-image"
+                            src="C:\Users\steve\Downloads\screencapture-file-C-Users-steve-OneDrive-react-doc-html-2020-11-28-21_55_04react.png"
+                            alt="TECH. DOC">
+                        <p class="project-title"><br>리엑트 기술문건, Click!</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="Contact" class="contact-section"><br><br>
+            <img class="good" src="C:\Users\steve\Downloads\cooperation-3.jpg" alt="cooperation">
+            <div class="contact-section-header">
+                <h1>Hope to contact you & getting chance to work with you!</h1>
+                <p>["Laptop", "Cooperative", "Passion", "Creative", "Limitless", "No Geo Boudary"]</p>
+                <h1>같이 협업할 수 있는 좋은 기회가 오기를 희망합니다.</h1>
+                <p>["컴퓨터", "협업", "열정", "창조적", "무한한", "어디든지"]</p>
+            </div>
+            <div id="contact" class="contact-links">
+                <img src="https://img.icons8.com/material-two-tone/2x/secured-letter.png" alt="google form"
+                    style="width:88px"><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6PT-D4PUje4fhlVyXKZM2ThrIRWX5v_H0xLUlHN8OuytQKQ/viewform?usp=sf_link"
+                    target="_blank" class="btn contact-details"><u> 여기에 연락처 주시면 즉시 연락 드립니다!</u></a><br>
+            </div>
+        </section>
+        <div class="icon-bar"><a href="#Contact" class="contact"><i class="fa fa-fw fa-phone-square"></i></a></div>
+
+        <footer>
+            <p>&copy; 2020 Created by Steven Lee following guide from freeCodeCamp. </p>
+        </footer>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
