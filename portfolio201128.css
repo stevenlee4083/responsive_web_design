@@ -29,7 +29,7 @@ body {
     margin: 0;
 } 
 .topnav {
-     overflow: hidden;
+     overflow: scroll;
      background-color: rgb(42, 5, 103);
      position: sticky;
  }
@@ -64,7 +64,7 @@ body {
      }
 
      .topnav a.icon {
-         float: right;
+         float: inline-end;
          display: block;
      }
  }
