@@ -46,7 +46,7 @@
     flex: 3;
   }
 
-  @meida (max-width: 700px) {
+  @media (max-width: 700px) {
     #hero {
       position: relative;
     }
@@ -74,7 +74,7 @@
   }
 
   @media (max-width: 650px) {
-    nav>ul {
+    nav>ul>li {
       flex-direction: column;
     }
   }
@@ -242,6 +242,11 @@
     border-radius: 3px;
   }
 
+  .product>div>img {
+    border: 2px solid turquoise;
+    box-shadow: 4px 2px 2px dodgerblue;
+  }
+
   .btn {
     background-color: yellow;
     width: 80px;
@@ -249,6 +254,11 @@
     border-radius: 10px;
     font-weight: bold;
     margin-bottom: 5px;
+    /*vertical-align: bottom;
+    position: absolute;
+    top: 70%;
+    height: 6em;
+    margin-top: -3em;*/
   }
 
   .btn:hover {
@@ -291,7 +301,7 @@
     padding: 0 5px;
   }
 
-  footer>span {
+  footer>p {
     margin-top: 1px;
     display: flex;
     justify-content: flex-end;
@@ -345,7 +355,7 @@
     </div>
     <nav id="nav-bar">
       <ul id="frst">
-        <li><a class="nav-link" href="#features">Original의 특징</a></li>
+        <li><a class="nav-link" href="#features">제품 특징</a></li>
         <li><a class="nav-link" href="#how-it-works">연주 실황</a></li>
         <li><a class="nav-link" href="#pricing">트럼본 및 부속품</a></li>
       </ul>
@@ -360,37 +370,35 @@
       <input id="submit" type="submit" value="Get Started" class="btn" />
     </form>
   </section><br>
-  <div class="container"><br <section id="features">
-    <div class="grid">
-      <div class="icon">
-        <img src="https://img.icons8.com/color/2x/modern-statue.png" alt="torch">
+  <div class="container"><br>
+    <section id="features">
+      <div class="grid">
+        <div class="icon">
+          <img src="https://img.icons8.com/color/2x/modern-statue.png" alt="torch">
+        </div>
+        <div class="desc">
+          <h2 class="menu">Premium Materials</h2><br>
+          <p>우리의 트롬본은 현지에서 공급되는 가장 빛나는 황동을 사용합니다. 이렇게하면 구매 수명이 늘어납니다.</p>
+        </div>
       </div>
-      <div class="desc">
-        <h2 class="menu">Premium Materials</h2><br>
-        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your
-          purchase.</p>
+      <div class="grid">
+        <div class="icon">
+          <img src="https://img.icons8.com/color/2x/truck.png" alt="torch">
+        </div>
+        <div class="desc">
+          <h2 class="menu">Fast Shipping</h2><br>
+          <p>트롬본 제작이 끝나자마자 받으실 수 있습니다. 또한 만족스럽지 않은 경우 무료 반품을 제공합니다.</p>
+        </div>
       </div>
-    </div>
-    <div class="grid">
-      <div class="icon">
-        <img src="https://img.icons8.com/color/2x/truck.png" alt="torch">
+      <div class="grid">
+        <div class="icon">
+          <img src="https://img.icons8.com/ios-filled/2x/full-battery.png" alt="torch">
+        </div>
+        <div class="desc">
+          <h2 class="menu">Quality Assurance</h2><br>
+          <p>구매 하실 때마다 우리는 손상이나 결함이 없는지 항상 확인합니다. 그리고 악기의 피치를 확인하고 테스트합니다.</p>
+        </div>
       </div>
-      <div class="desc">
-        <h2 class="menu">Fast Shipping</h2><br>
-        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns
-          if you are not satisfied.</p>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="icon">
-        <img src="https://img.icons8.com/ios-filled/2x/full-battery.png" alt="torch">
-      </div>
-      <div class="desc">
-        <h2 class="menu">Quality Assurance</h2><br>
-        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the
-          pitch of your instrument.</p>
-      </div>
-    </div>
 
     </section>
     <section id="how-it-works">
@@ -403,30 +411,31 @@
         <div class="level">Tenor Trombone</div>
         <h2>$600</h2>
         <div>
-          <img src="https://github.com/stevenlee4083/images.git/trombone.jpg" alt="Tenor Trombone">
+          <img src="https://stevenlee4083.github.io/images/tenor-trombone.jpg" alt="Tenor Trombone"
+            style="width: 230px; height: 105px;">
         </div>
+        <p>이 악기는 내림나조의 테너로 왼손 엄지로 조작합니다. 밸브식인 우회관(迂回管)을 장비한 것이므로 이것으로 완전4도 이하의 바조로 변경할 수가 있습니다</p>
         <button class="btn">Select</button>
       </div>
       <div class="product" id="base">
         <div class="level">Base Trombone</div>
         <h2>$900</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
+        <div>
+          <img src="https://stevenlee4083.github.io/images/brass-trombone.jpg" alt="Base Trombone"
+            style="width: 230px; height: 105px; ">
+        </div>
+        <p>테너베이스보다 울림이 좋기 때문에 <br> 영국과 독일에서는 오늘날에도 사조를 <br> 오케스트라에서 쓰고 있습니다</p> <br>
         <button class="btn">Select</button>
       </div>
-      <div class="product" id="valve">
+      <div class="product" id="alto">
         <div class="level">Alto Trombone</div>
         <h2>$1200</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
+        <div>
+          <img src="https://stevenlee4083.github.io/images/trombone.jpg" alt="alto trombone"
+            style="width: 230px; height: 105px;">
+        </div>
+        <p>알토 트롬본은 E ♭ (때로는 D 또는 B ♭ 로터리 밸브 부착) 또는 F, 테너 트롬본보다 완벽한 4/5 높은 음조로 16 세기부터 18 세기까지 가장 높은 목소리로 사용되었습니다</p>
+
         <button class="btn">Select</button>
       </div>
     </sction>
@@ -435,34 +444,27 @@
       <div class="product" id="valve">
         <div class="level">Trombone Mute</div>
         <h2>$80</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
+        <div>
+          <img src="https://stevenlee4083.github.io/images/Trombone_Mouthpiece.jpg" alt="mouth piece"
+            style="width: 180px; height: 105px;">
+        </div><br>
         <button class="btn">Select</button>
       </div>
       <div class="product" id="valve">
         <div class="level">Valve Trombone</div>
-        <h2>$1200</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
+        <h2>$75</h2>
+        <div>
+          <img src="https://stevenlee4083.github.io/images/Trombone_Case.jpg" alt="case"
+            style="width: 180px; height: 105px;">
+        </div><br>
         <button class="btn">Select</button>
       </div>
       <div class="product" id="valve">
         <div class="level">Valve Trombone</div>
-        <h2>$1200</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
+        <h2>$40</h2>
+        <div>
+          <img src="https://stevenlee4083.github.io/images/트럼본 거치대.jpg" alt="거치대" style="width: 180px; height: 105px;">
+        </div><br>
         <button class="btn">Select</button>
       </div>
 
@@ -473,7 +475,7 @@
         <li><a href="#">Terms</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <span>Copyright 2016, Original. from freeCodeCamp 2020 by Steven Lee.</span>
+      <p> &copy;2020 freeCodeCamp 이승욱 제작</p>
     </footer>
   </div>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top!</button>

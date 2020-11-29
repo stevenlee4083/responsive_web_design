@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1585427915733-13af3fcb80b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);
+            box-sizing: border-box;
+            background-color: #cccccc;
+            max-height: 1700px;
+            height: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #title,
+        #descrip {
+            text-align: center;
+        }
+
+        #name,
+        #email,
+        #number,
+        #dropdown {
+            color: black;
+            font-size: 18px;
+            width: 100%;
+            max-width: 700px;
+            box-sizing: border-box;
+        }
+
+        form {
+            background-color: rgba(160, 120, 220, 0.6);
+            color: white;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .survey-form {
+            padding: 8px;
+        }
+
+        #comment {
+            min-height: 60px;
+            width: 100%;
+            padding: 0.625rem;
+            resize: vertical;
+            color: black;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: green;
+            color: inherit;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width:400px) {
+            form {
+                margin: 0px 2px;
+                padding: 5px 5px;
+            }
+
+            form h3,
+            p {
+                font-size: 120%;
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        form {
+            background-color: rgba(160, 120, 220, 0.8);
+        }
+
+        .submit-btn {
+            background-color: darkblue;
+        }
+
+        button #close {
+            text-align: center;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .goodbye {
+            visibility: hidden;
+        }
+
+        footer {
+            margin-left: 40%;
+            margin-right: 25%;
+            align-content: center;
+            color: azure;
+        }
+
+        footer>p {
+            font-size: 14px;
+        }
+    </style>
+    <title>Survey Form</title>
+</head>
+
+<body>
+
+    <h1 id="title">FreeCodeCamp 등록사용자 설문 페이지(가상)</h1>
+    <h4 id="descrip"><i>freeCodeCamp의 플랫폼 개선에 도움을 주셔서 감사합니다.</i></h4>
+    <form class="survey-form" action="#title">
+        <label for="name">
+            <h3>성명</h3>
+        </label><br />
+        <input type="text" id="name" name="name" placeholder="성함을 한글로 입력해주세요" pattern="^[가-힣]{2,4}$" required>
+        <br><br>
+        <label for="email">
+            <h3>이메일</h3>
+        </label><br />
+        <input type="text" id="email" name="email" title="Please correct email!" placeholder="영어소/대문자 숫자만 입력해 주세요!"
+            pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+        <br><br>
+        <label for="number">
+            <h3>핸드폰번호</h3>
+        </label><br />
+        <input type="text" id="number" name="number" placeholder="11 자리 입력 바람니다!" min="01" max="99"
+            pattern="[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]+" required><br><br>
+
+        <p>현재 역할을 가장 잘 설명하는 옵션은 무엇입니까?</p>
+        <select id="dropdown" text="현재 어떤 일을 하고게신가요?" style="color:black">
+            <option selected="selected">직업을 알려주세요.</option>
+            <option value="student">학생</option>
+            <option value="full_time_job">직장인</option>
+            <option value="full_time_learner">전일 수강생</option>
+            <option value="prefer_not-to_say">밝히기 싫습니다.</option>
+            <option value="others">기타</option>
+        </select><br><br>
+
+        <p>당신의 친구에게 freeCodeCamp 공부를 추천하겠습니까?</p>
+        <input type="radio" id="yes" name="choose" value="yes">
+        <label for="yes">적극 추천</label><br>
+        <input type="radio" id="half" name="choose" value="half">
+        <label for="half">상황따라서</label><br>
+        <input type="radio" id="nono" name="choose" value="nono">
+        <label for="nono">추천 안한다</label><br><br>
+
+        <p>freeCodeCamp 과목중 가장 많이 찾는 과목은 어떤것 입니까? <br>(복수추천가능)</p>
+        <input type="checkbox" id="checkbox1" name="cbox" value="pep">
+        <label for="checkbox1">Front-end Projects</label><br>
+        <input type="checkbox" id="checkbox2" name="cbox" value="bep">
+        <label for="checkbox2">Back-end Projects</label><br>
+        <input type="checkbox" id="checkbox3" name="cbox" value="dv">
+        <label for="checkbox3">Data Visualization</label><br>
+        <input type="checkbox" id="checkbox4" name="cbox" value="challan">
+        <label for="checkbox4">Challenges</label><br>
+        <input type="checkbox" id="checkbox4" name="cbox" value="osc">
+        <label for="checkbox5">Open Source Community</label><br>
+        <input type="checkbox" id="checkbox6" name="cbox" value="ghr">
+        <label for="checkbox6">Gitter Help Romms</label><br>
+        <input type="checkbox" id="checkbox7" name="cbox" value="vdo">
+        <label for="checkbox7">Videos</label><br>
+        <input type="checkbox" id="checkbox8" name="cbox" value="cmu">
+        <label for="checkbox8">City Meetups</label><br>
+        <input type="checkbox" id="checkbox9" name="cbox" value="wk">
+        <label for="checkbox9">Wiki</label><br>
+        <input type="checkbox" id="checkbox10" name="cbox" value="frm">
+        <label for="checkbox10">Forum</label><br>
+        <input type="checkbox" id="checkbox11" name="cbox" value="acs">
+        <label for="checkbox11">Additional Courses</label><br><br>
+
+
+        <p>의견을 듣습니다!</p>
+        <textarea id="comment" placeholder="의견을 적어주세요!"></textarea>
+        <input type="submit" value="제출" class="submit-btn" placeholder="제출">
+    </form>
+    <footer>
+        <p>&copy; 2020 freeCodeCamp Portfolio 이승욱 제작<p>
+    </footer>
+    <!--   <button class="submit">설문완료</button>
+    <p class="goodbye">수고하셨습니다!</p>
+     jQuery를 이용한 alert 표시로 안내
+     <script>
+        $("input.submit-btn").click(function () {
+            alert("에러없이 제출 완료 되었습니다!");
+
+        });
+        var hiddenBox = $( "#banner-message" );
+        $( "#button-container button" ).on( "click", function( event ) {
+        hiddenBox.show();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.submit').on('click', function () {
+                $('.goodbye').show(); // Set Id to the message you want to hide
+            });
+        });
+    </script> -->
+</body>
+
+</html>
