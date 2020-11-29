@@ -90,10 +90,18 @@
       list-style-type: none;
       width: 220px;
       border: 1px solid blueviolet;
+      background-color: cadetblue;
     }
 
     #navbar>ul>li {
       border: 1px solid blueviolet;
+      color: black;
+      font-weight: 400;
+    }
+
+    #navbar>ul>li>a {
+      color: black;
+      font-weight: 400;
     }
 
     .main-section {
@@ -173,7 +181,7 @@
       복잡한 리액트 애플리케이션들은 상태 관리, 라우팅, API와의 통신을 위한 추가 라이브러리의 사용이 일반적으로 요구된다</p>
   </header>
   <div id="container">
-    <nav id="navbar" style="background-color: gold;">
+    <nav id="navbar">
       <header> React <br> Documentation <br> Menu</header>
       <ul>
         <li><a class="nav-link" href="#React_Home">React Home</a></li>
