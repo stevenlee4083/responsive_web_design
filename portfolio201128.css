@@ -29,7 +29,7 @@ body {
     margin: 0;
 } 
 .topnav {
-     overflow: scroll;
+     overflow: hidden;
      background-color: rgb(42, 5, 103);
      position: sticky;
  }
@@ -110,7 +110,7 @@ body {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #welcome-section {
         height: auto;
-        padding-top: 50px;
+        padding-top: 20px;
         font-size: 120%
     }
 }
@@ -118,7 +118,7 @@ body {
 @media (max-width:991px) {
     #welcome-section {
         height: 80vh;
-        padding-top: 50px;
+        padding-top: 20px;
         font-size: 120%
     }
 }
@@ -126,7 +126,7 @@ body {
 @media (max-width:767px) {
     #welcome-section {
         height: 60vh;
-        padding-top: 40px;
+        padding-top: 10px;
         font-size: 120%
     }
 }
@@ -134,7 +134,7 @@ body {
 @media (max-width:479px) {
     #welcome-section {
         height: 40vh;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     #welcome-section h1 {
